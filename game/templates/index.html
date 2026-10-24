@@ -35,7 +35,7 @@
         <div class="hero-copy">
           <span class="eyebrow">CHƠI · HỌC · KHÁM PHÁ</span>
           <h1>Mỗi trò chơi,<br><em>một điều mới.</em></h1>
-          <p>18 hoạt động học tập và tư duy dành cho trẻ. Phiên chơi chỉ mở đúng trò và đúng thời lượng đã được chọn từ tài khoản Thiên Hạ.</p>
+          <p>18 hoạt động học tập và tư duy dành cho trẻ. Một phiên mở toàn bộ trò chơi, với thời lượng chung từ 10 đến 60 phút do người lớn thiết lập.</p>
           <div class="hero-stats">
             <span><b>18</b> trò chơi</span>
             <span><b>10</b> chủ đề</span>
@@ -51,7 +51,7 @@
       </div>
 
       <div id="sessionNotice" class="session-notice" hidden>
-        <div><span>🔐</span><div><b>Cần mở phiên từ tài khoản Thiên Hạ</b><p>Thư viện vẫn mở công khai. Để chơi, hãy chọn trò và thời lượng ở trang dịch vụ.</p></div></div>
+        <div><span>🔐</span><div><b>Cần mở phiên từ tài khoản Thiên Hạ</b><p>Thư viện vẫn mở công khai. Để chơi tất cả 18 trò, hãy mở phiên 10–60 phút từ tài khoản Thiên Hạ.</p></div></div>
         <a href="https://thienha.io.vn/projects/game-of-thien">MỞ PHIÊN MỚI →</a>
       </div>
 
@@ -128,6 +128,7 @@
 
   <div id="toast" class="toast" role="status"></div>
   <script>window.GOT_PORTAL_ORIGIN="https://thienha.io.vn";</script>
-  <script src="{{ url_for('static',filename='js/app-v89.js') }}"></script>
+  <script src="{{ url_for('static',filename='js/session-clock.js') }}?v=2"></script>
+  <script src="{{ url_for('static',filename='js/app-v89.js') }}?v=session-2"></script>
 </body>
 </html>

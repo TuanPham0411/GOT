@@ -36,6 +36,8 @@ Portal ở `127.0.0.1:15050`, game ở `127.0.0.1:15080` (preview game: `/?previ
 
 Đọc [triển khai và rollback SIKA](docs/PLATFORM-SIKA.md), [game](docs/GAME.md), [phạm vi XiaoZhi](projects/xiaozhi/README.md).
 
+Game Of Thiên mở cả 18 trò trong một phiên. Thời lượng chung: 10, 20, 30, 40, 50 hoặc 60 phút, tính từ lúc mở phiên; đổi trò hoặc tải lại trang không đặt lại đồng hồ.
+
 ## Kiểm thử và image
 
 ```sh
@@ -47,6 +49,7 @@ python3 -m venv .venv
 .venv/bin/python game/tools/audit_v88_complete.py
 .venv/bin/python game/tools/audit_v89_ui.py
 node --check game/static/js/app-v89.js
+node --test game/tests-js/session-clock.test.cjs
 ```
 
 GitHub Actions kiểm thử cả hai dịch vụ và Docker smoke test trước khi build/publish image AMD64/ARM64 tới `ghcr.io/tuanpham0411/got/{portal,game}:COMMIT_SHA`. Dùng SHA cố định khi triển khai; không phụ thuộc `latest`. Việc source công khai không tự chứng minh GHCR package đã công khai: kiểm tra quyền package hoặc dùng image build tại máy đích.

@@ -12,8 +12,12 @@
   {% if session_error %}<div class="error"><h1>Chưa thể mở phiên.</h1><p>{{session_error}}</p><a href="https://thienha.io.vn/projects/game-of-thien#mo-phien">Quay lại để người lớn chuẩn bị phiên mới</a></div>
   {% else %}
   <span class="status">● SESSION KEY ĐÃ XÁC NHẬN</span><h1>Khu vườn hôm nay đã sẵn sàng.</h1><p>Chỉ các trò và thời lượng do phụ huynh hoặc giáo viên cấp cho phiên này mới xuất hiện.</p>
-  <section class="grid">{% for game in game_config.games %}<article class="game" data-minutes="{{game.duration_minutes}}"><span>GAME_ID · {{game.id}}</span><h2>{{game.name}}</h2><p>{{game.ages}} tuổi · {{game.duration_minutes}} phút</p><button type="button">Bắt đầu trò này</button></article>{% endfor %}</section>
-  <div class="timer"><strong id="activity">Chọn một trò để bắt đầu</strong><strong id="clock">Tổng phiên · {{game_config.total_duration_minutes}} phút</strong></div>
-  <script>let timer;document.querySelectorAll('.game button').forEach(btn=>btn.onclick=()=>{clearInterval(timer);const card=btn.closest('.game'),name=card.querySelector('h2').textContent;let left=Number(card.dataset.minutes)*60;document.querySelectorAll('.game button').forEach(x=>x.disabled=x!==btn);const tick=()=>{document.querySelector('#activity').textContent='Đang chơi · '+name;document.querySelector('#clock').textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');if(left--<=0){clearInterval(timer);document.querySelector('#activity').textContent='Đã hết thời gian cho '+name;document.querySelectorAll('.game button').forEach(x=>x.disabled=false)}};tick();timer=setInterval(tick,1000)})</script>
+  <section class="grid">{% for game in game_config.games %}<article class="game"><h2>{{game.name}}</h2><p>{{game.ages}} tuổi · thời gian dùng chung cho cả phiên</p></article>{% endfor %}</section>
+  <div class="timer"><strong id="activity">Toàn bộ trò chơi được mở trong phiên</strong><strong id="clock"></strong></div>
+  <script>
+    const expires=Date.parse({{session_expires|tojson}});
+    const tick=()=>{const left=Math.max(0,Math.ceil((expires-Date.now())/1000));document.querySelector('#clock').textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');if(!left)document.querySelector('#activity').textContent='Phiên đã hết thời gian'};
+    tick();setInterval(tick,1000);
+  </script>
   {% endif %}
 </main></body></html>

@@ -7,3 +7,4 @@ game/tests/
 game/static/cache/
 game/.venv/
 game/.env
+game/tests-js/

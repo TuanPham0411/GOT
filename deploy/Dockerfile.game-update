@@ -1,0 +1,9 @@
+# Reuse a verified baseline only when dependencies and resource/image assets match.
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+ARG APP_REVISION
+ENV APP_REVISION=$APP_REVISION
+COPY --chown=app:app game/app.py /app/app.py
+COPY --chown=app:app game/templates/ /app/templates/
+COPY --chown=app:app game/static/js/ /app/static/js/
+COPY --chown=app:app game/static/css/ /app/static/css/

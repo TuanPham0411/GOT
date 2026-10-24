@@ -1,0 +1,9 @@
+# Reuse a verified local baseline only when dependency manifests/Dockerfiles match.
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+ARG APP_REVISION
+ENV APP_REVISION=$APP_REVISION
+COPY --chown=app:app app.py xiaozhi_tools.py seed.py /app/
+COPY --chown=app:app templates/ /app/templates/
+COPY --chown=app:app static/ /app/static/
+COPY --chown=app:app catalog/ /app/catalog/

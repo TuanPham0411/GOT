@@ -637,43 +637,24 @@ def create_game_of_thien_session():
     user = current_user()
     if not user:
         return jsonify(ok=False, message='Vui lòng đăng nhập tài khoản Thiên Hạ trước khi mở phiên'), 401
-    payload = request.get_json(silent=True) or {}
-    if not secrets.compare_digest(str(payload.get('csrf', '')), session.get('csrf', '')):
+    payload = request.get_json(silent=True)
+    if not isinstance(payload, dict):
+        return jsonify(ok=False, message='Thông tin phiên chưa hợp lệ'), 400
+    if not session.get('csrf') or not secrets.compare_digest(str(payload.get('csrf', '')), session['csrf']):
         return jsonify(ok=False, message='Phiên đăng nhập đã thay đổi, vui lòng tải lại trang'), 400
     if not game_of_thien_access(user)['active']:
         return jsonify(ok=False, message='Vui lòng kích hoạt Game of Thiên trước khi mở phiên'), 403
 
-    requested_games = payload.get('games')
-    if not isinstance(requested_games, list) or len(requested_games) < 1:
-        return jsonify(ok=False, message='Hãy chọn ít nhất một trò cho phiên này'), 400
-    games = []
-    seen = set()
-    total_minutes = 0
-    for requested in requested_games:
-        if not isinstance(requested, dict):
-            return jsonify(ok=False, message='Danh sách trò chơi chưa hợp lệ'), 400
-        game_id = str(requested.get('id', ''))
-        if game_id not in GAME_OF_THIEN_LIBRARY or game_id in seen:
-            return jsonify(ok=False, message='Có trò chơi không nằm trong danh sách được phép'), 400
-        try:
-            duration = int(requested.get('duration_minutes', 0))
-        except (TypeError, ValueError):
-            duration = 0
-        if duration not in (5, 10, 15, 20):
-            return jsonify(ok=False, message='Thời lượng mỗi trò cần là 5, 10, 15 hoặc 20 phút'), 400
-        seen.add(game_id)
-        total_minutes += duration
-        games.append({
-            'id': game_id,
-            'name': GAME_OF_THIEN_LIBRARY[game_id]['name'],
-            'ages': GAME_OF_THIEN_LIBRARY[game_id]['ages'],
-            'duration_minutes': duration,
-        })
+    duration = payload.get('duration_minutes')
+    if type(duration) is not int or duration not in (10, 20, 30, 40, 50, 60):
+        return jsonify(ok=False, message='Thời lượng phiên cần là 10, 20, 30, 40, 50 hoặc 60 phút'), 400
+    games = [dict(id=game_id, name=game['name'], ages=game['ages'])
+             for game_id, game in GAME_OF_THIEN_LIBRARY.items()]
 
     token = secrets.token_urlsafe(32)
     created = datetime.now(TZ)
-    expires = created + timedelta(minutes=total_minutes + 15)
-    config = {'games': games, 'total_duration_minutes': total_minutes, 'version': 1}
+    expires = created + timedelta(minutes=duration)
+    config = {'games': games, 'duration_minutes': duration, 'total_duration_minutes': duration, 'version': 2}
     with db() as c:
         c.execute(
             "INSERT INTO game_sessions(token,user_id,status,config_json,created_at,expires_at) VALUES(?,?,?,?,?,?)",
@@ -705,6 +686,7 @@ def get_game_of_thien_session(token):
         created_at=row['created_at'],
         expires_at=row['expires_at'],
         started_at=row['started_at'],
+        server_now=datetime.now(TZ).isoformat(timespec='milliseconds'),
     )
     response.headers['Access-Control-Allow-Origin'] = 'https://gameofthien.thienha.io.vn'
     response.headers['Vary'] = 'Origin'

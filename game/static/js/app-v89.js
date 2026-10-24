@@ -1,7 +1,7 @@
 "use strict";
 
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const State={bootstrap:null,session:null,hiddenScenes:[],current:null,setup:{},score:0,sound:true,view:"games",topic:"animal",items:[],visible:30,topicCache:new Map(),cleanup:null,timer:null,remaining:0,timerMinutes:5};
+const State={bootstrap:null,session:null,hiddenScenes:[],current:null,setup:{},score:0,sound:true,view:"games",topic:"animal",items:[],visible:30,topicCache:new Map(),cleanup:null,timer:null,remaining:0,sessionClock:null,sessionTimer:null,sessionExpired:false};
 const UI={games:$("#gamesView"),library:$("#libraryView"),design:$("#designView"),game:$("#gameView"),grid:$("#gameGrid"),stage:$("#stage"),modal:$("#setupModal"),detail:$("#detailModal"),topics:$("#topicTabs"),libraryGrid:$("#libraryGrid"),search:$("#librarySearch"),toast:$("#toast")};
 const META={
   "listen-image-en":{group:"learning",color:"#1b7f8d",desc:"Nghe phát âm tiếng Anh và chọn đúng hình."},
@@ -53,8 +53,7 @@ const itemSpeechText=(item,lang="vi")=>{
 const speakItem=(item,lang="vi")=>speak(itemSpeechText(item,lang),lang==="en"?"en-US":"vi-VN");
 const FACT_ICONS={category:"●",home:"⌂",globe:"◎",food:"◆",check:"✓",eye:"◉",road:"↔",bolt:"⚡",shield:"★",leaf:"☘",water:"≈",clock:"◷",size:"↕",speed:"➜",sound:"♫"};
 const factIcon=f=>FACT_ICONS[String(f?.icon||"").toLowerCase()]||f?.icon||"✦";
-const allowedGame=id=>!!State.session?.games?.some(g=>g.id===id);
-const currentSessionGame=id=>State.session?.games?.find(g=>g.id===id);
+const allowedGame=id=>!State.sessionExpired&&!!State.session?.games?.some(g=>g.id===id);
 
 async function fetchSession(){
   const token=new URLSearchParams(location.search).get("session");
@@ -62,7 +61,7 @@ async function fetchSession(){
   try{
     const response=await fetch((window.GOT_PORTAL_ORIGIN||"https://thienha.io.vn")+"/api/game-of-thien/sessions/"+encodeURIComponent(token),{cache:"no-store"});
     const data=await response.json();if(!response.ok||!data.ok)throw Error(data.message||"Phiên không hợp lệ");
-    return {token,games:data.config.games||[],expiresAt:data.expires_at,status:data.status};
+    return {token,games:data.config.games||[],expiresAt:data.expires_at,serverNow:data.server_now,status:data.status};
   }catch(error){showToast(error.message);return {error:error.message,games:[]}}
 }
 
@@ -71,10 +70,11 @@ async function init(){
     const [bootstrap,session,hiddenData]=await Promise.all([fetch("/api/bootstrap").then(r=>r.json()),fetchSession(),fetch("/resource/hidden-scenes-v87.json",{cache:"no-store"}).then(r=>r.json())]);
     State.bootstrap=bootstrap;State.session=session;State.hiddenScenes=hiddenData.scenes||[];
     if(["127.0.0.1","localhost"].includes(location.hostname)&&new URLSearchParams(location.search).get("preview")==="1"){
-      State.session={games:bootstrap.games.map(g=>({id:g.id,duration_minutes:5})),status:"preview"};
+      State.session={games:bootstrap.games.map(g=>({id:g.id})),expiresAt:new Date(Date.now()+10*60000).toISOString(),serverNow:new Date().toISOString(),status:"preview"};
     }
     $("#resourceCount").textContent=bootstrap.manifest?.counts?.items||"500+";
-    renderSession();renderGames();renderTopics();renderDesign();bind();AudioSystem.startMusic();
+    if(State.session&&!State.session.error)State.sessionClock=new GOTSessionClock(State.session.expiresAt,State.session.serverNow);
+    renderSession();renderGames();renderTopics();renderDesign();bind();startSessionMonitor();AudioSystem.startMusic();
   }catch(error){UI.grid.innerHTML='<div class="result-box"><h2>Không tải được dữ liệu</h2><p>'+escapeHtml(error.message)+'</p></div>'}
 }
 function bind(){
@@ -99,7 +99,7 @@ function bind(){
 }
 function renderSession(){
   const chip=$("#sessionChip"),notice=$("#sessionNotice");
-  if(State.session&&!State.session.error&&State.session.games.length){chip.textContent=State.session.games.length+" trò · phiên đang hoạt động";chip.className="session-chip active";notice.hidden=true}
+  if(State.session&&!State.session.error&&State.session.games.length){chip.textContent=State.session.games.length+" trò · còn "+formatTime(State.sessionClock?.remaining()||0);chip.className="session-chip active";notice.hidden=true}
   else{chip.textContent=State.session?.error||"Chưa mở phiên chơi";chip.className="session-chip error";notice.hidden=false}
 }
 function switchView(view){
@@ -115,8 +115,8 @@ function renderGames(filter="all"){
   State.bootstrap.games.filter(g=>g.enabled!==false&&(filter==="all"||META[g.id]?.group===filter)).forEach((g,i)=>{
     const locked=!allowedGame(g.id),m=META[g.id]||{group:"learning",color:"#35677d",desc:"Một thử thách đang chờ bạn."},b=document.createElement("button");
     b.className="game-card"+(locked?" locked":"");b.style.setProperty("--card",m.color);
-    b.innerHTML='<span class="game-index">'+String(i+1).padStart(2,"0")+' · '+m.group.toUpperCase()+'</span><span class="game-icon">'+escapeHtml(g.icon||"🎮")+"</span><h3>"+escapeHtml(g.name.vi)+"</h3><p>"+escapeHtml(m.desc)+'</p><footer>'+(locked?"CHƯA CÓ TRONG PHIÊN":"CHƠI NGAY")+' <span>'+(locked?"🔒":"→")+"</span></footer>";
-    b.onclick=()=>locked?showToast("Hãy chọn trò này khi mở phiên từ Thiên Hạ"):openSetup(g);UI.grid.appendChild(b)
+    b.innerHTML='<span class="game-index">'+String(i+1).padStart(2,"0")+' · '+m.group.toUpperCase()+'</span><span class="game-icon">'+escapeHtml(g.icon||"🎮")+"</span><h3>"+escapeHtml(g.name.vi)+"</h3><p>"+escapeHtml(m.desc)+'</p><footer>'+(locked?"MỞ PHIÊN ĐỂ CHƠI":"CHƠI NGAY")+' <span>'+(locked?"🔒":"→")+"</span></footer>";
+    b.onclick=()=>locked?showToast("Hãy mở phiên từ Thiên Hạ để chơi tất cả trò"):openSetup(g);UI.grid.appendChild(b)
   })
 }
 function openSetup(game){
@@ -125,20 +125,19 @@ function openSetup(game){
   const fields=$("#setupFields");fields.innerHTML="";
   if(game.topicSelectable)addSelect("topic","Chủ đề",State.bootstrap.topics.filter(t=>["animal","transport","plant","object","flag"].includes(t.id)).map(t=>[t.id,t.name.vi]));
   if(game.difficultySelectable)addSelect("difficulty","Cấp độ",[["easy","Dễ"],["normal","Vừa"],["hard","Khó"]]);
-  const allocation=currentSessionGame(game.id);if(allocation){const p=document.createElement("p");p.className="instruction";p.textContent="Thời lượng của trò trong phiên: "+allocation.duration_minutes+" phút";fields.appendChild(p)}
+  const p=document.createElement("p");p.className="instruction";p.textContent="Dùng chung thời gian phiên · còn "+formatTime(State.sessionClock?.remaining()||0);fields.appendChild(p);
   UI.modal.classList.add("show")
 }
 function addSelect(name,label,options){
   const l=document.createElement("label"),s=document.createElement("select");l.textContent=label;s.name=name;options.forEach(([v,t])=>s.add(new Option(t,v)));s.onchange=()=>State.setup[name]=s.value;State.setup[name]=s.value;l.appendChild(s);$("#setupFields").appendChild(l)
 }
 function startCurrentGame(){
+  if(State.sessionClock?.remaining()<=0||!allowedGame(State.current?.id))return expireSession();
   UI.modal.classList.remove("show");switchView("game");setScore(0);
   AudioSystem.startMusic();
   $("#gameTitle").textContent=State.current.name.vi;$("#gameMeta").textContent=["Dễ","Vừa","Khó"][["easy","normal","hard"].indexOf(State.setup.difficulty)]||"";
   const id=State.current.id;
-  State.timerMinutes=currentSessionGame(State.current.id)?.duration_minutes||5;
-  const delayedTimer=["image-answer","alphabet-en","alphabet-vi"].includes(id);
-  if(delayedTimer){clearInterval(State.timer);State.timer=null;State.remaining=State.timerMinutes*60;$("#gameTime").textContent="CHUẨN BỊ"}else startTimer(State.timerMinutes);
+  startTimer();
   if(id==="listen-image-en")return quizGame("listen","en");
   if(id==="listen-image-vi")return quizGame("listen","vi");
   if(id==="image-answer")return quizGame("image","vi");
@@ -158,10 +157,25 @@ function startCurrentGame(){
   if(id==="match-transport")return matchGame("transport");
   if(id==="match-habitat")return matchGame("habitat");
 }
-function startTimer(minutes){
-  clearInterval(State.timer);State.remaining=minutes*60;
-  const draw=()=>{$("#gameTime").textContent=String(Math.floor(State.remaining/60)).padStart(2,"0")+":"+String(State.remaining%60).padStart(2,"0")};draw();
-  State.timer=setInterval(()=>{State.remaining--;draw();if(State.remaining<=0){clearInterval(State.timer);finishGame(false,"Hết thời gian của trò chơi")}},1000)
+function formatTime(seconds){return String(Math.floor(seconds/60)).padStart(2,"0")+":"+String(seconds%60).padStart(2,"0")}
+function expireSession(){
+  if(State.sessionExpired)return;
+  State.sessionExpired=true;clearInterval(State.sessionTimer);clearInterval(State.timer);
+  State.session.error="Phiên đã hết thời gian. Người lớn cần mở phiên mới.";
+  UI.modal.classList.remove("show");UI.detail.classList.remove("show");
+  switchView("games");renderSession();renderGames();showToast(State.session.error);
+}
+function startSessionMonitor(){
+  clearInterval(State.sessionTimer);
+  if(!State.sessionClock)return;
+  const tick=()=>{if(State.sessionClock.remaining()<=0)return expireSession();renderSession()};
+  tick();if(!State.sessionExpired)State.sessionTimer=setInterval(tick,1000);
+  document.addEventListener("visibilitychange",tick);addEventListener("pageshow",tick);
+}
+function startTimer(){
+  clearInterval(State.timer);
+  const tick=()=>{State.remaining=State.sessionClock?.remaining()||0;$("#gameTime").textContent=formatTime(State.remaining);if(State.remaining<=0)expireSession()};
+  tick();if(!State.sessionExpired)State.timer=setInterval(tick,1000);
 }
 function stopGame(){clearInterval(State.timer);State.timer=null;AudioSystem.stopMusic();if(State.cleanup)try{State.cleanup()}catch{}State.cleanup=null;speechSynthesis.cancel();if(UI.stage)UI.stage.innerHTML=""}
 function finishGame(won,title){
@@ -186,7 +200,7 @@ async function quizGame(mode,language){
     if(mode==="image"){
       const buttons=$$("[data-i]");buttons.forEach(b=>b.disabled=true);
       for(let i=0;i<buttons.length;i++){buttons[i].classList.add("previewing");await speakAsync(choices[i].viName,"vi-VN");await new Promise(r=>setTimeout(r,180));buttons[i].classList.remove("previewing")}
-      buttons.forEach(b=>b.disabled=false);if(!timerStarted){timerStarted=true;startTimer(State.timerMinutes);showToast("Bắt đầu tính giờ!")}
+      buttons.forEach(b=>b.disabled=false);if(!timerStarted){timerStarted=true;startTimer();showToast("Tiếp tục phiên chơi")}
     }
     $$("[data-i]").forEach((b,i)=>b.onclick=()=>{if(choices[i]===correct){reward(20);round++;setTimeout(next,450)}else miss("Chưa đúng, hãy quan sát lại")})
   };next()
@@ -219,7 +233,7 @@ async function alphabetGame(lang){
   const buttons=$$(".letter");
   buttons.forEach(b=>b.onclick=()=>{speak(sayName(b.textContent),lang==="en"?"en-US":"vi-VN");reward(2,"Đã nghe chữ "+b.textContent)});
   $("#readAlphabet").onclick=async()=>{const readButton=$("#readAlphabet");readButton.disabled=true;buttons.forEach(b=>b.disabled=true);for(let i=0;i<buttons.length;i++){buttons[i].classList.add("speaking");await speakAsync(sayName(letters[i]),lang==="en"?"en-US":"vi-VN");buttons[i].classList.remove("speaking")}buttons.forEach(b=>b.disabled=false);readButton.disabled=false};
-  startTimer(State.timerMinutes)
+  startTimer()
 }
 async function memoryGame(){
   const count=State.setup.difficulty==="hard"?8:6,items=await getGameItems(count),cards=shuffle(items.flatMap((x,i)=>[{...x,key:i},{...x,key:i}]));let open=[],done=new Set;

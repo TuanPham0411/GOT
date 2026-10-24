@@ -30,6 +30,7 @@ jobs:
       - run: python game/tools/audit_v88_complete.py
       - run: python game/tools/audit_v89_ui.py
       - run: node --check game/static/js/app-v89.js
+      - run: node --test game/tests-js/session-clock.test.cjs
       - name: Prepare isolated container test state
         run: |
           python -c "import secrets; from pathlib import Path; Path('.env.portal').write_text('FLASK_SECRET_KEY='+secrets.token_hex(32)+'\n')"

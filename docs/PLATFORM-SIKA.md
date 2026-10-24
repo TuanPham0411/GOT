@@ -50,3 +50,9 @@ Các bản triển khai và config nằm dưới `/opt/thienha-platform`. Chỉ 
 Không bật ngay DB cũ vì có thể mất các thay đổi tài khoản/đơn hàng phát sinh sau cutover. Dừng portal container, chụp snapshot private state mới, kiểm tra tương thích schema, rồi phục hồi `users.db` nhất quán và release files vào vị trí cũ trước khi khởi động unit cũ. Hai phiên bản dùng cùng schema hiện có; vẫn phải kiểm tra integrity và giữ backup trước khi copy.
 
 Rollback ngay trong cutover thất bại được script xử lý tự động. Rollback muộn sau khi đã phục vụ traffic cần xử lý state như trên.
+
+## Giữ dữ liệu firmware và cập nhật mã nhỏ
+
+Trong state private, `/data/files` chứa ZIP tải xuống của portal; `/data/firmware` chứa BIN/ZIP cho endpoint tải firmware có kiểm tra giấy phép. Khi di chuyển từ SIKA cũ, chép firmware công khai từ `portal/static/xiaozhi/` và ZIP được phép phát hành vào `data/firmware` (không ghi đè tệp đã có), rồi mới snapshot. Hai thư mục này không nằm trong Git/image và phải được giữ trong private backup.
+
+Khi chỉ sửa Python/template/JS/CSS, có thể dùng `deploy/Dockerfile.{portal,game}-update` với `BASE_IMAGE` là image baseline đã build/kiểm thử và `APP_REVISION` là SHA mã mới. Trước đó phải xác nhận requirements, Dockerfile gốc, thư viện resource và ảnh game không thay đổi. Các recipe này giữ các lớp dependency đã xác minh để Pi không phải tải/cài lại; nếu dependency hoặc asset thay đổi, dùng build đầy đủ. CI luôn build image đầy đủ từ Dockerfile chính.

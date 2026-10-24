@@ -1,0 +1,22 @@
+/* Scoped layout fixes for the complete XiaoZhi guide. */
+body.xiaozhi-page #main>main.xz-page{box-sizing:border-box;width:100%!important;max-width:none!important;margin:0!important;padding:48px clamp(20px,4vw,72px) 80px!important;overflow:visible}
+body.xiaozhi-page .xz-page *{box-sizing:border-box;min-width:0}
+body.xiaozhi-page .xz-page>.xz-hero{width:100%!important;max-width:none!important;display:grid!important;grid-template-columns:minmax(0,1.5fr) minmax(280px,.65fr)!important;align-items:center!important;gap:clamp(24px,4vw,64px)!important;min-height:460px!important;padding:clamp(28px,4vw,64px)!important;margin:0 0 32px!important;overflow:hidden;border-radius:24px;background:linear-gradient(115deg,#08151c,#0a2930)!important}
+body.xiaozhi-page .xz-hero:before,body.xiaozhi-page .xz-hero:after{display:none!important}
+body.xiaozhi-page .xz-hero h1{font-size:clamp(42px,5.5vw,86px)!important;line-height:1.04!important;letter-spacing:-.055em;max-width:none!important;width:auto!important;margin:20px 0!important;overflow-wrap:anywhere}
+body.xiaozhi-page .xz-hero p{font-size:16px!important;line-height:1.8!important;max-width:68ch!important}
+body.xiaozhi-page .xz-hero .status-card{width:100%!important;max-width:none!important;margin:0!important;align-self:center;padding:26px!important}
+body.xiaozhi-page .status-card dl>div{gap:18px}.xiaozhi-page .status-card dd{overflow-wrap:anywhere;text-align:right}
+body.xiaozhi-page .xz-hero .button-row{flex-wrap:wrap!important;gap:10px!important;margin-top:28px!important}
+body.xiaozhi-page .xz-hero .button{white-space:normal!important;min-width:0!important;text-align:center}
+body.xiaozhi-page .xz-page>.doc-nav{max-width:100%;width:100%;overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;gap:4px;padding:8px;scrollbar-width:thin}
+body.xiaozhi-page .doc-nav a{flex:0 0 auto;padding:14px 16px}
+body.xiaozhi-page .doc-section{max-width:100%!important;scroll-margin-top:110px}
+body.xiaozhi-page .doc-section img,body.xiaozhi-page .doc-section svg{max-width:100%;height:auto}
+body.xiaozhi-page .bom-table>div{grid-template-columns:minmax(100px,1fr) minmax(180px,2.4fr) minmax(35px,.25fr) minmax(150px,1fr)!important;overflow-wrap:anywhere}
+body.xiaozhi-page .doc-section pre{max-width:100%;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+body.xiaozhi-page .got-session-duration select{max-width:100%}
+body .got-session-duration>label{display:block;margin:0 0 12px;color:var(--got-muted)}
+body .got-session-duration>select{width:min(100%,320px);padding:16px 18px;border:1px solid var(--got-mint);border-radius:12px;background:#0a3031;color:var(--got-ink);font:700 18px/1.4 Manrope,Arial,sans-serif}
+@media(max-width:1000px){body.xiaozhi-page .xz-page>.xz-hero{grid-template-columns:minmax(0,1fr)!important;min-height:0!important}.xiaozhi-page .xz-hero .status-card dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}body.xiaozhi-page .xz-hero h1{max-width:850px!important}}
+@media(max-width:640px){body.xiaozhi-page #main>main.xz-page{padding:24px 16px 50px!important}body.xiaozhi-page .xz-page>.xz-hero{padding:26px 20px!important;border-radius:18px}body.xiaozhi-page .xz-hero h1{font-size:44px!important}.xiaozhi-page .xz-hero .status-card dl{grid-template-columns:1fr}body.xiaozhi-page .xz-hero .button-row{display:grid!important;grid-template-columns:1fr!important}.xiaozhi-page .xz-hero .button{width:100%}body.xiaozhi-page .bom-table>div{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)!important;gap:10px!important}.xiaozhi-page .bom-table .bom-head{display:none!important}body.xiaozhi-page .section-title{display:block!important}body.xiaozhi-page .doc-section h2{font-size:30px!important;overflow-wrap:anywhere}body.xiaozhi-page .wiring-grid,body.xiaozhi-page .guide-grid,body.xiaozhi-page .pin-audit>div{grid-template-columns:minmax(0,1fr)!important}}

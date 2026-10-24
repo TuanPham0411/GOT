@@ -59,18 +59,37 @@ class PortalTests(unittest.TestCase):
     def test_authenticated_game_session_and_expiry(self):
         self.assertEqual(self.client.post('/projects/game-of-thien/sessions',json={}).status_code,401)
         self.login()
-        payload={'csrf':'test-csrf','games':[{'id':'memory','duration_minutes':5}]}
+        payload={'csrf':'test-csrf','duration_minutes':30}
         bad=dict(payload,csrf='wrong')
         self.assertEqual(self.client.post('/projects/game-of-thien/sessions',json=bad).status_code,400)
         response=self.client.post('/projects/game-of-thien/sessions',json=payload)
         self.assertEqual(response.status_code,200)
         token=response.json['launch_url'].split('session=')[1]
         result=self.client.get('/api/game-of-thien/sessions/'+token)
-        self.assertEqual(result.json['config']['games'][0]['id'],'memory')
+        self.assertEqual({g['id'] for g in result.json['config']['games']},set(module.GAME_OF_THIEN_LIBRARY))
+        self.assertEqual(result.json['config']['duration_minutes'],30)
+        self.assertEqual(result.json['config']['version'],2)
+        self.assertEqual((datetime.fromisoformat(result.json['expires_at'])-datetime.fromisoformat(result.json['created_at'])).total_seconds(),1800)
         self.assertEqual(result.headers['Access-Control-Allow-Origin'],'https://gameofthien.thienha.io.vn')
         with module.db() as c:
             c.execute('UPDATE game_sessions SET expires_at=? WHERE token=?',('2000-01-01T00:00:00+00:00',token))
         self.assertEqual(self.client.get('/api/game-of-thien/sessions/'+token).status_code,410)
+
+    def test_duration_steps_and_limits(self):
+        self.login()
+        for duration in (10,20,30,40,50,60):
+            with self.subTest(duration=duration):
+                response=self.client.post('/projects/game-of-thien/sessions',json={'csrf':'test-csrf','duration_minutes':duration})
+                self.assertEqual(response.status_code,200)
+                token=response.json['launch_url'].split('session=')[1]
+                config=self.client.get('/api/game-of-thien/sessions/'+token).json
+                self.assertEqual(config['config']['total_duration_minutes'],duration)
+                self.assertEqual(len(config['config']['games']),18)
+                self.assertEqual((datetime.fromisoformat(config['expires_at'])-datetime.fromisoformat(config['created_at'])).total_seconds(),duration*60)
+        for invalid in (None,0,5,15,61,70,True,'10',10.5,[],{}):
+            with self.subTest(invalid=invalid):
+                self.assertEqual(self.client.post('/projects/game-of-thien/sessions',json={'csrf':'test-csrf','duration_minutes':invalid}).status_code,400)
+        self.assertEqual(self.client.post('/projects/game-of-thien/sessions',json=['invalid']).status_code,400)
 
     def test_robot_license_uses_same_database(self):
         self.login()
