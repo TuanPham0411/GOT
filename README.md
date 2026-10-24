@@ -35,3 +35,5 @@ node --check game/static/js/app-v89.js
 Nên chạy trong virtualenv. Gunicorn dùng trong Linux container; kiểm thử Flask/Pillow chạy được trên Windows. Audit v88 kiểm tra dữ liệu, checksum, ảnh, phân loại và 30 cảnh; audit v89 kiểm tra cấu trúc UI. Chưa kiểm thử tương tác toàn bộ 18 trò chơi.
 
 GitHub Actions kiểm thử mã/dữ liệu, build và smoke test container, sau đó xuất bản image AMD64/ARM64 lên GHCR. Xem [hướng dẫn Sika](docs/RPI-SIKA.md) và [báo cáo rà soát](docs/REVIEW.md).
+
+Tạo ZIP độc lập, chứa ảnh thật và checksum SHA-256: `python tools/package_release.py ../GOT-offline.zip`. Script chỉ lấy file được Git theo dõi; yêu cầu đã tải LFS đầy đủ.
