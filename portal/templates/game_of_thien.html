@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% block title %}Game of Thiên · Thiên Hạ{% endblock %}
+{% block content %}
+<main class="got-page">
+  <section class="got-hero">
+    <div class="got-wrap got-hero-grid">
+      <div class="got-hero-copy">
+        <span class="got-kicker">GAME OF THIÊN · HỌC QUA CHƠI</span>
+        <h1>Mỗi phiên học là một chuyến <em>phiêu lưu nhỏ</em></h1>
+        <p>Phụ huynh và giáo viên chuẩn bị một không gian vừa sức cho trẻ: chọn trò chơi, đặt thời lượng cho từng trò rồi mới bắt đầu phiên học riêng.</p>
+        <div class="got-actions">
+          <a class="button primary" href="#mo-phien">CHUẨN BỊ PHIÊN HỌC</a>
+          <a class="button" href="#cach-hoat-dong">XEM CÁCH HOẠT ĐỘNG</a>
+        </div>
+        <div class="got-soft-note"><span aria-hidden="true">✦</span> Trẻ không cần tài khoản riêng và không thể tự mở trò ngoài phiên</div>
+      </div>
+      <figure class="got-hero-art">
+        <img src="/static/images/game-of-thien-learning-garden.png?v=1" alt="Các bạn nhỏ cùng khám phá sách, hình khối và trò chơi trong khu vườn học tập">
+      </figure>
+    </div>
+  </section>
+
+  <nav class="got-jump" aria-label="Nội dung trang">
+    <div class="got-wrap">
+      <a href="#gioi-thieu">GIỚI THIỆU</a>
+      <a href="#cach-hoat-dong">CÁCH HOẠT ĐỘNG</a>
+      <a href="#mo-phien">MỞ PHIÊN</a>
+      <a href="#gioi-han">GIỚI HẠN</a>
+      <a href="#dich-vu">DỊCH VỤ</a>
+    </div>
+  </nav>
+
+  <section class="got-section" id="gioi-thieu">
+    <div class="got-wrap">
+      <div class="got-heading">
+        <span class="got-kicker">MỘT KHOẢNG THỜI GIAN CÓ MỤC ĐÍCH</span>
+        <h2>Người lớn chuẩn bị<br><em>Trẻ em khám phá</em></h2>
+        <p>Game of Thiên không mở ra một kho trò chơi vô hạn. Mỗi lần học là một phiên riêng được người lớn chuẩn bị trước, có nội dung rõ ràng và thời gian vừa đủ để trẻ vui chơi mà vẫn giữ được nhịp sinh hoạt lành mạnh.</p>
+      </div>
+      <div class="got-values">
+        <article><span class="got-value-icon got-coral">ABC</span><h3>Phù hợp độ tuổi</h3><p>Từ nhận biết màu sắc, chữ cái đến toán, khoa học và tư duy cho trẻ 3–11 tuổi.</p></article>
+        <article><span class="got-value-icon got-yellow">15</span><h3>Thời lượng vừa sức</h3><p>Mỗi trò có thời gian riêng do phụ huynh hoặc giáo viên chọn trước khi bắt đầu.</p></article>
+        <article><span class="got-value-icon got-mint">✓</span><h3>Chỉ chơi trò đã chọn</h3><p>Trong phiên, trẻ chỉ nhìn thấy những hoạt động đã được người lớn cho phép.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="got-section got-how" id="cach-hoat-dong">
+    <div class="got-wrap">
+      <div class="got-heading got-heading-center">
+        <span class="got-kicker">BA BƯỚC NHẸ NHÀNG</span>
+        <h2>Từ đường dẫn đến <em>phiên học riêng</em></h2>
+      </div>
+      <ol class="got-story-steps">
+        <li><span>1</span><div class="got-step-doodle got-doodle-door" aria-hidden="true"></div><h3>Đăng nhập tài khoản Thiên Hạ</h3><p>Đường dẫn game sẽ đưa người dùng về trang này. Chỉ cần tài khoản thienha.io.vn, không cần tạo tài khoản game khác.</p></li>
+        <li><span>2</span><div class="got-step-doodle got-doodle-cards" aria-hidden="true"></div><h3>Chọn trò và thời lượng</h3><p>Người lớn chọn một hoặc nhiều trò, sau đó đặt 5–20 phút riêng cho mỗi trò theo khả năng tập trung của trẻ.</p></li>
+        <li><span>3</span><div class="got-step-doodle got-doodle-star" aria-hidden="true"></div><h3>Bắt đầu phiên học</h3><p>Hệ thống tạo một phiên riêng rồi mới chuyển sang web game. Đường dẫn không có phiên hợp lệ sẽ luôn quay lại đây.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="got-section got-builder-section" id="mo-phien">
+    <div class="got-wrap">
+      <div class="got-heading">
+        <span class="got-kicker">KHU VƯỜN HÔM NAY</span>
+        <h2>Chuẩn bị một <em>phiên học mới</em></h2>
+        <p>Chọn những hoạt động phù hợp. Có thể chọn mọi trò phù hợp và đặt thời lượng riêng cho từng trò.</p>
+      </div>
+
+      {% if not game_user %}
+      <div class="got-gate-card">
+        <div class="got-gate-illustration" aria-hidden="true"><span></span><i></i></div>
+        <div><span class="got-kicker">BƯỚC ĐẦU TIÊN</span><h3>Đăng nhập để mở phiên</h3><p>Dùng chính tài khoản Thiên Hạ đang sử dụng ở trang chủ. Trẻ không cần tài khoản riêng.</p><a class="button primary" href="/login?next=/projects/game-of-thien%23mo-phien">ĐĂNG NHẬP TÀI KHOẢN THIÊN HẠ</a></div>
+      </div>
+      {% elif not game_access.active %}
+      <div class="got-gate-card">
+        <div class="got-gate-illustration got-gate-flower" aria-hidden="true"><span></span><i></i></div>
+        <div><span class="got-kicker">TÀI KHOẢN ĐÃ SẴN SÀNG</span><h3>Kích hoạt Game of Thiên</h3><p>Bạn đã đăng nhập với tài khoản <strong>{{ game_user.name or game_user.email }}</strong>. Kích hoạt 7 ngày dùng thử hoặc chọn gói dịch vụ để bắt đầu mở phiên.</p><a class="button primary" href="/support?service=game-of-thien#game-of-thien-service">KÍCH HOẠT DỊCH VỤ</a></div>
+      </div>
+      {% else %}
+      <form class="got-builder" id="gotSessionForm" novalidate>
+        <input type="hidden" name="csrf" value="{{ csrf_token }}">
+        <div class="got-builder-top">
+          <div><span class="got-kicker">ĐANG CHUẨN BỊ BỞI</span><strong>{{ game_user.name or game_user.email }}</strong></div>
+          <div class="got-license-chip"><span aria-hidden="true">✓</span> DỊCH VỤ ĐANG HOẠT ĐỘNG{% if game_access.label %} · {{ game_access.label }}{% endif %}</div>
+        </div>
+        <fieldset>
+          <legend>Chọn trò chơi cho phiên này</legend>
+          <p class="got-field-help">Đánh dấu các trò muốn chơi rồi chọn thời lượng cho từng trò</p>
+          <div class="got-game-grid">
+            {% for game_id, game in game_library.items() %}
+            <label class="got-game-card" data-game-card>
+              <input type="checkbox" name="game" value="{{ game_id }}">
+              <span class="got-game-mark got-{{ ['coral','yellow','mint','violet','sky','leaf'][loop.index0 % 6] }}">{{ game.mark }}</span>
+              <span class="got-game-copy"><strong>{{ game.name }}</strong><small>{{ game.description }} · {{ game.ages }} tuổi</small></span>
+              <span class="got-duration"><select aria-label="Thời lượng {{ game.name }}" disabled><option value="5">5 phút</option><option value="10" selected>10 phút</option><option value="15">15 phút</option><option value="20">20 phút</option></select></span>
+            </label>
+            {% endfor %}
+          </div>
+        </fieldset>
+        <div class="got-builder-summary">
+          <div><span>ĐÃ CHỌN</span><strong id="gotSelectedCount">0 trò</strong></div>
+          <div><span>TỔNG THỜI GIAN</span><strong id="gotTotalTime">0 phút</strong></div>
+          <button class="button primary" id="gotStartButton" type="submit" disabled>BẮT ĐẦU PHIÊN HỌC</button>
+        </div>
+        <p class="got-form-message" id="gotFormMessage" role="status" aria-live="polite"></p>
+      </form>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="got-section" id="gioi-han">
+    <div class="got-wrap got-safety-grid">
+      <div class="got-heading">
+        <span class="got-kicker">VUI CHƠI CÓ GIỚI HẠN</span>
+        <h2>Một chiếc khung <em>dịu dàng và rõ ràng</em></h2>
+        <p>Phiên học giúp trẻ biết mình sẽ làm gì và trong bao lâu. Khi hết thời gian, phiên tự kết thúc; muốn tiếp tục, người lớn cần chuẩn bị một phiên mới.</p>
+      </div>
+      <div class="got-safety-cards">
+        <article><span>01</span><h3>Đúng trò đã chọn</h3><p>Không có đường dẫn đi sang trò khác ngoài danh sách của phiên.</p></article>
+        <article><span>02</span><h3>Đúng thời gian đã đặt</h3><p>Mỗi trò dừng đúng theo thời lượng đã đặt riêng.</p></article>
+        <article><span>03</span><h3>Mỗi lần là một phiên mới</h3><p>Phiên cũ hết hạn không thể dùng lại, giúp người lớn luôn chủ động chuẩn bị.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="got-section got-service" id="dich-vu">
+    <div class="got-wrap got-service-grid">
+      <div class="got-heading"><span class="got-kicker">DỊCH VỤ GẮN VỚI TÀI KHOẢN</span><h2>Dùng thử trước<br><em>Gia hạn khi cần</em></h2><p>Không liên kết thiết bị và không cần tài khoản game riêng. Một tài khoản Thiên Hạ quản lý việc kích hoạt và chuẩn bị các phiên học.</p></div>
+      <div class="got-plan-list">
+        <article><span>7 NGÀY</span><div><h3>Dùng thử miễn phí</h3><p>Trải nghiệm đầy đủ quy trình chọn trò, đặt thời gian và mở phiên.</p></div></article>
+        <article><span>LINH HOẠT</span><div><h3>Tháng · Năm · Trọn đời</h3><p>Chọn thời hạn phù hợp cho gia đình hoặc lớp học và gia hạn nối tiếp.</p></div></article>
+        <a class="button primary" href="/support?service=game-of-thien#game-of-thien-service">KÍCH HOẠT HOẶC GIA HẠN</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% if game_user and game_access.active %}
+<script>
+(() => {
+  const form = document.getElementById('gotSessionForm');
+  if (!form) return;
+  const cards = [...form.querySelectorAll('[data-game-card]')];
+  const countEl = document.getElementById('gotSelectedCount');
+  const totalEl = document.getElementById('gotTotalTime');
+  const button = document.getElementById('gotStartButton');
+  const message = document.getElementById('gotFormMessage');
+
+  function selectedGames() {
+    return cards.filter(card => card.querySelector('input').checked).map(card => ({
+      id: card.querySelector('input').value,
+      duration_minutes: Number(card.querySelector('select').value)
+    }));
+  }
+
+  function refresh() {
+    const selected = selectedGames();
+    const total = selected.reduce((sum, game) => sum + game.duration_minutes, 0);
+    cards.forEach(card => {
+      const checked = card.querySelector('input').checked;
+      card.classList.toggle('is-selected', checked);
+      card.querySelector('select').disabled = !checked;
+    });
+    countEl.textContent = selected.length + ' trò';
+    totalEl.textContent = total + ' phút';
+    const valid = selected.length >= 1;
+    button.disabled = !valid;
+    message.textContent = '';
+  }
+
+  cards.forEach(card => {
+    card.querySelector('input').addEventListener('change', refresh);
+    card.querySelector('select').addEventListener('change', refresh);
+  });
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    const games = selectedGames();
+    if (!games.length) return refresh();
+    button.disabled = true;
+    button.textContent = 'ĐANG CHUẨN BỊ PHIÊN';
+    message.textContent = 'Khu vườn học tập đang được chuẩn bị cho bạn';
+    try {
+      const response = await fetch('/projects/game-of-thien/sessions', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        body: JSON.stringify({csrf: form.elements.csrf.value, games})
+      });
+      const data = await response.json();
+      if (!response.ok || !data.ok) throw new Error(data.message || 'Chưa thể mở phiên lúc này');
+      window.location.assign(data.launch_url);
+    } catch (error) {
+      message.textContent = error.message || 'Chưa thể mở phiên lúc này';
+      button.textContent = 'BẮT ĐẦU PHIÊN HỌC';
+      refresh();
+    }
+  });
+  refresh();
+})();
+</script>
+{% endif %}
+{% endblock %}

@@ -1,3 +1,5 @@
+> Tài liệu lịch sử của bản game riêng. Với toàn bộ portal và lần chuyển Docker mới, xem [PLATFORM-SIKA.md](PLATFORM-SIKA.md).
+
 # Rà soát 2026-10-24
 
 ## Đã sửa

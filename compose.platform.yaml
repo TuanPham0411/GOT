@@ -1,0 +1,48 @@
+name: thienha-platform
+services:
+  portal:
+    build:
+      context: ./portal
+      args:
+        APP_REVISION: ${APP_REVISION:-development}
+    image: ${PORTAL_IMAGE:-thienha-portal:local}
+    init: true
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    env_file:
+      - ${PORTAL_ENV_FILE:-./.env.portal}
+    environment:
+      THIENHA_DATA_DIR: /data
+      XIAOZHI_MUSIC_SESSION_DIR: /data/music_sessions
+      THIENHA_SITE_DB: /data/users.db
+      XIAOZHI_FIRMWARE_DIR: /data/firmware
+    ports:
+      - "127.0.0.1:${PORTAL_PORT:-15050}:5050"
+    volumes:
+      - ${PORTAL_DATA_DIR:-./state/portal}:/data
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+  game:
+    build: .
+    image: ${GOT_IMAGE:-got-game:local}
+    init: true
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    ports:
+      - "127.0.0.1:${GOT_PORT:-15080}:5000"
+    volumes:
+      - thumbnails:/data/thumbs
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+volumes:
+  thumbnails:

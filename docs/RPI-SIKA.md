@@ -1,3 +1,5 @@
+> Tài liệu lịch sử của bản game riêng. Với toàn bộ portal và lần chuyển Docker mới, xem [PLATFORM-SIKA.md](PLATFORM-SIKA.md).
+
 # Triển khai Raspberry Pi Sika
 
 Chưa triển khai thực tế: chưa truy cập được SSH của Sika. Không dừng dịch vụ hiện tại trước khi đối chiếu mã nguồn và sao lưu.

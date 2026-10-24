@@ -1,0 +1,11 @@
+*
+!requirements.txt
+!app.py
+!xiaozhi_tools.py
+!seed.py
+!templates/
+!templates/**
+!static/
+!static/**
+!catalog/
+!catalog/**

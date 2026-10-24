@@ -1,39 +1,54 @@
-# GOT — Game Of Thien
+# Thiên Hạ Platform
 
-Bản đóng gói game từ workspace ngày 2026-10-24: giao diện v8.9, 10 chủ đề trong danh mục, 1.043 mục, 18 trò chơi và 30 cảnh tìm đồ vật. Thư viện ảnh gốc dùng Git LFS; bỏ archive triển khai cũ và cache.
+Repository cho `thienha.io.vn`, portal tài khoản/dự án, Game Of Thiên và dịch vụ web XiaoZhi Copper Robot. Mã portal được nhập từ SIKA1; game giữ lịch sử và thư viện Git LFS của repository GOT. Ứng dụng `th.io.vn` trong repository `Thien-Ha` là hệ thống riêng.
 
-**Phạm vi hiện tại:** game và cấu hình Docker. Mã nguồn đầy đủ của portal `thienha.io.vn` chưa có trong bản này; chưa thể đóng gói hay rà soát toàn bộ portal. Kho `Thien-Ha` phục vụ `th.io.vn` là ứng dụng khác, không được ghép vào đây. Chưa đối chiếu với phiên bản đang chạy trên Sika.
+| Thành phần | Mã nguồn | Runtime |
+| --- | --- | --- |
+| Portal: tài khoản Google, catalog, quản trị, tải xuống, đơn hàng, giấy phép, phiên chơi | `portal/` | Flask, Gunicorn, SQLite |
+| Game Of Thiên: 18 trò, 10 chủ đề, 30 cảnh tìm đồ | `game/` | Flask, Pillow, espeak-ng |
+| XiaoZhi: quản lý robot, giấy phép, công cụ Internet, GPT, YouTube, luồng nhạc | `portal/xiaozhi_tools.py` | Flask blueprint, ffmpeg |
+| XiaoZhi ESP32-S3 | `portal/static/xiaozhi/` | Firmware đã biên dịch và manifest web installer |
 
-## Chạy bằng Docker
+**Giới hạn nguồn firmware:** SIKA chỉ có binary XiaoZhi, chưa tìm thấy source/build toolchain ESP32. Repository này build lại đầy đủ hai dịch vụ web, không tuyên bố build lại được firmware. Các file phát hành có kiểm soát và dữ liệu tài khoản nằm trong state riêng tư, không ở Git hay image.
 
-Cần Docker Engine + Compose plugin trên Linux, hoặc Docker Desktop với Linux containers trên Windows/macOS. Image nhắm Linux AMD64 và ARM64; chưa hỗ trợ ARM 32 bit.
+## Chạy thử toàn bộ nền tảng
+
+Cần Docker Engine + Compose v2, Git LFS; Linux AMD64 hoặc ARM64.
 
 ```sh
-git lfs install
 git clone https://github.com/TuanPham0411/GOT.git
 cd GOT
+git lfs install --local
 git lfs pull
-docker compose up -d --build --wait
+cp portal/.env.example .env.portal
+# Điền FLASK_SECRET_KEY cố định, ngẫu nhiên và OAuth của bạn vào .env.portal.
+mkdir -p state/portal
+sudo chown 10001:10001 state/portal
+docker compose -f compose.platform.yaml build
+docker compose -f compose.platform.yaml run --rm --no-deps portal python seed.py
+docker compose -f compose.platform.yaml up -d --no-build --wait --wait-timeout 180
+python3 deploy/smoke.py
 ```
 
-Mở http://127.0.0.1:5080. Để máy khác trong LAN truy cập, đặt `GOT_BIND=0.0.0.0` trong `.env` (chép từ `.env.example`) rồi khởi động lại Compose. Mặc định chỉ mở localhost để dùng với reverse proxy/tunnel.
+Portal ở `127.0.0.1:15050`, game ở `127.0.0.1:15080` (preview game: `/?preview=1`). OAuth và cookie Secure cần HTTPS/reverse proxy để dùng tài khoản; smoke test công khai không chứng minh đăng nhập Google thật. Cấu hình production SIKA giữ nguyên hostname và callback đang dùng. Các API ngoài cần khóa và kết nối tương ứng; không có khóa thì tính năng đó chưa hoạt động.
 
-Container chạy Gunicorn bằng user riêng, filesystem chỉ đọc, cache ảnh trong volume, healthcheck và có `espeak-ng` cho tiếng Việt/Anh. Cổng 5080 cho phép kiểm thử song song dịch vụ cũ ở cổng 5000.
+`seed.py` chỉ thêm nội dung công khai của hai project nếu slug chưa có; không ghi đè catalog đã chỉnh sửa, không tạo tài khoản hay dữ liệu thanh toán. Firmware ZIP tải xuống và asset có kiểm soát cần phục hồi từ private backup vào `/data/files`. Không thay private database production bằng database seed.
 
-Game giữ cơ chế phiên hiện tại qua `https://thienha.io.vn`. Khi kiểm thử độc lập, mở `http://127.0.0.1:5080/?preview=1`; preview chỉ bật trên localhost/127.0.0.1. Cần kiểm thử tích hợp tài khoản/phiên trước khi chuyển production.
+Đọc [triển khai và rollback SIKA](docs/PLATFORM-SIKA.md), [game](docs/GAME.md), [phạm vi XiaoZhi](projects/xiaozhi/README.md).
 
-## Kiểm thử
+## Kiểm thử và image
 
 ```sh
-pip install -r game/requirements.txt
-python -m unittest discover -s game/tests -v
-python game/tools/audit_v88_complete.py
-python game/tools/audit_v89_ui.py
+python3 -m venv .venv
+.venv/bin/pip install -r game/requirements.txt -r portal/requirements.txt
+.venv/bin/python -m unittest discover -s game/tests -v
+.venv/bin/python -m unittest discover -s portal/tests -v
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python game/tools/audit_v88_complete.py
+.venv/bin/python game/tools/audit_v89_ui.py
 node --check game/static/js/app-v89.js
 ```
 
-Nên chạy trong virtualenv. Gunicorn dùng trong Linux container; kiểm thử Flask/Pillow chạy được trên Windows. Audit v88 kiểm tra dữ liệu, checksum, ảnh, phân loại và 30 cảnh; audit v89 kiểm tra cấu trúc UI. Chưa kiểm thử tương tác toàn bộ 18 trò chơi.
+GitHub Actions kiểm thử cả hai dịch vụ và Docker smoke test trước khi build/publish image AMD64/ARM64 tới `ghcr.io/tuanpham0411/got/{portal,game}:COMMIT_SHA`. Dùng SHA cố định khi triển khai; không phụ thuộc `latest`. Việc source công khai không tự chứng minh GHCR package đã công khai: kiểm tra quyền package hoặc dùng image build tại máy đích.
 
-GitHub Actions kiểm thử mã/dữ liệu, build và smoke test container, sau đó xuất bản image AMD64/ARM64 lên GHCR. Xem [hướng dẫn Sika](docs/RPI-SIKA.md) và [báo cáo rà soát](docs/REVIEW.md).
-
-Tạo ZIP độc lập, chứa ảnh thật và checksum SHA-256: `python tools/package_release.py ../GOT-offline.zip`. Script chỉ lấy file được Git theo dõi; yêu cầu đã tải LFS đầy đủ.
+Dockerfile hỗ trợ BuildKit secret `proxy_ca` cho môi trường có HTTPS proxy; kiểm tra TLS luôn bật. Không copy CA phiên hay thông tin xác thực vào image. Các phiên bản trực tiếp được pin trong requirements; hiện chưa có lockfile transitive.

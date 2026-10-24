@@ -1,0 +1,9 @@
+{
+  "name": "XiaoZhi Copper Robot 2.4.0",
+  "version": "2.4.0-fixed1",
+  "new_install_prompt_erase": true,
+  "builds": [{
+    "chipFamily": "ESP32-S3",
+    "parts": [{"path": "xiaozhi-copper-robot-v2.4.0-esp32s3.bin", "offset": 0}]
+  }]
+}

@@ -1,0 +1,5 @@
+services:
+  portal:
+    image: ${PORTAL_IMAGE:?Set PORTAL_IMAGE to an immutable tested portal image tag}
+  game:
+    image: ${GOT_IMAGE:?Set GOT_IMAGE to an immutable tested game image tag}

@@ -1,0 +1,5 @@
+.xz-page>.xz-hero{min-height:620px;padding:clamp(40px,7vw,96px);margin:24px 0 56px;background:radial-gradient(circle at 82% 15%,rgba(30,211,221,.2),transparent 32%),linear-gradient(135deg,#02090f,#0b2630);border:1px solid var(--line)}
+.xz-page>.xz-hero h1{font-size:clamp(58px,7vw,106px);line-height:.9;letter-spacing:-.065em;max-width:850px}
+.xz-page>.xz-hero p{max-width:780px;line-height:1.8;font-size:16px}
+.xz-page>.xz-hero .status-card{background:rgba(1,8,13,.82);backdrop-filter:blur(12px)}
+@media(max-width:700px){.xz-page>.xz-hero{padding:34px 22px;min-height:auto}.xz-page>.xz-hero h1{font-size:52px}}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Phiên học · Game of Thiên</title>
+  <style>
+    :root{color-scheme:dark;--bg:#06131a;--panel:#0c2029;--line:#21404b;--ink:#f5f2e9;--muted:#9eb2b8;--orange:#ff7a45;--cyan:#61d5d8}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 5%,#123844 0,transparent 35%),var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif}main{width:min(1120px,calc(100% - 32px));margin:auto;padding:54px 0 80px}.brand{font:700 12px ui-monospace,monospace;letter-spacing:.18em;color:var(--orange)}h1{font-size:clamp(42px,7vw,82px);line-height:.95;letter-spacing:-.055em;max-width:900px;margin:22px 0}p{color:var(--muted);line-height:1.7}.status{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:var(--cyan);font:600 12px ui-monospace,monospace}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:36px}.game{padding:24px;border:1px solid var(--line);background:linear-gradient(145deg,#0d222b,#091920);border-radius:18px;text-align:left;color:inherit}.game span{display:block;color:var(--orange);font:600 11px ui-monospace,monospace;letter-spacing:.12em}.game h2{font-size:24px;margin:16px 0 8px}.game button{margin-top:18px;border:0;border-radius:10px;padding:13px 16px;background:var(--orange);color:#17100c;font-weight:800;cursor:pointer}.game button:disabled{opacity:.45}.timer{position:sticky;bottom:18px;margin-top:32px;padding:18px 22px;border:1px solid var(--line);background:#07151bf2;border-radius:14px;display:flex;justify-content:space-between;gap:20px}.error{margin-top:32px;padding:24px;border:1px solid #854538;background:#351a17;border-radius:16px}a{color:var(--cyan)}@media(max-width:620px){main{padding-top:30px}.timer{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body><main>
+  <div class="brand">GAME OF THIÊN · PHIÊN HỌC ĐƯỢC CẤP QUYỀN</div>
+  {% if session_error %}<div class="error"><h1>Chưa thể mở phiên.</h1><p>{{session_error}}</p><a href="https://thienha.io.vn/projects/game-of-thien#mo-phien">Quay lại để người lớn chuẩn bị phiên mới</a></div>
+  {% else %}
+  <span class="status">● SESSION KEY ĐÃ XÁC NHẬN</span><h1>Khu vườn hôm nay đã sẵn sàng.</h1><p>Chỉ các trò và thời lượng do phụ huynh hoặc giáo viên cấp cho phiên này mới xuất hiện.</p>
+  <section class="grid">{% for game in game_config.games %}<article class="game" data-minutes="{{game.duration_minutes}}"><span>GAME_ID · {{game.id}}</span><h2>{{game.name}}</h2><p>{{game.ages}} tuổi · {{game.duration_minutes}} phút</p><button type="button">Bắt đầu trò này</button></article>{% endfor %}</section>
+  <div class="timer"><strong id="activity">Chọn một trò để bắt đầu</strong><strong id="clock">Tổng phiên · {{game_config.total_duration_minutes}} phút</strong></div>
+  <script>let timer;document.querySelectorAll('.game button').forEach(btn=>btn.onclick=()=>{clearInterval(timer);const card=btn.closest('.game'),name=card.querySelector('h2').textContent;let left=Number(card.dataset.minutes)*60;document.querySelectorAll('.game button').forEach(x=>x.disabled=x!==btn);const tick=()=>{document.querySelector('#activity').textContent='Đang chơi · '+name;document.querySelector('#clock').textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');if(left--<=0){clearInterval(timer);document.querySelector('#activity').textContent='Đã hết thời gian cho '+name;document.querySelectorAll('.game button').forEach(x=>x.disabled=false)}};tick();timer=setInterval(tick,1000)})</script>
+  {% endif %}
+</main></body></html>

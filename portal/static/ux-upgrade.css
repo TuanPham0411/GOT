@@ -1,0 +1,56 @@
+/* Thiên Hạ UX layer - shared controls, accessibility and responsive shell. */
+:root{--shell-max:1380px;--focus:#8ff7ff;--surface-raised:#0a1d25;--shadow-soft:0 22px 70px rgba(0,0,0,.22)}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{min-width:320px}
+.site-header{position:sticky;top:0;z-index:1000;max-width:none;padding-inline:max(18px,calc((100vw - var(--shell-max))/2));box-shadow:0 10px 36px rgba(0,0,0,.2)}
+.site-header .brand{min-width:max-content}
+.site-header nav a{position:relative;min-height:44px;padding:0 15px;display:inline-flex;align-items:center}
+.site-header nav a[aria-current="page"]{background:#123d4d;color:#8ff7ff}
+.site-header nav a[aria-current="page"]:after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:2px;background:#e97132}
+.head-tools{display:flex;align-items:center;gap:8px}
+.locale-switch{display:inline-flex;align-items:center;padding:3px;border:1px solid rgba(255,255,255,.18);background:#061923}
+.locale-switch a{display:grid;place-items:center;min-width:34px;min-height:34px;color:#9db5bd;text-decoration:none;font:700 10px 'IBM Plex Mono',monospace}
+.locale-switch a.active{background:#e97132;color:#fff}
+.nav-toggle{display:none;place-items:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.2);background:#092936;color:#fff;cursor:pointer}
+.nav-toggle span,.nav-toggle:before,.nav-toggle:after{content:"";display:block;width:19px;height:2px;background:currentColor;transition:.2s}
+.nav-toggle span{margin:4px 0}
+.nav-toggle[aria-expanded="true"] span{opacity:0}
+.nav-toggle[aria-expanded="true"]:before{transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"]:after{transform:translateY(-6px) rotate(-45deg)}
+.account-actions{position:relative}
+.account-menu{position:absolute;right:0;top:calc(100% + 12px);display:none;min-width:190px;padding:8px;border:1px solid #315866;background:#061820;box-shadow:var(--shadow-soft)}
+.account-actions.open .account-menu{display:grid}
+.account-menu a,.account-menu button{min-height:42px;padding:0 12px;border:0;background:transparent;color:#ddecf0;text-align:left;text-decoration:none;font:700 10px 'IBM Plex Mono',monospace;cursor:pointer}
+.account-menu a:hover,.account-menu button:hover{background:#10323e;color:#8ff7ff}
+.account-menu form{margin:0}
+.account-menu button{width:100%;color:#ff9c7a}
+button,input,select,textarea,a{scroll-margin-top:110px}
+:where(a,button,input,select,textarea):focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.button{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.button.is-busy{pointer-events:none;opacity:.7}
+.button.is-busy:after{content:"";width:13px;height:13px;margin-left:9px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:th-spin .7s linear infinite}
+@keyframes th-spin{to{transform:rotate(360deg)}}
+.form-message:empty{display:none}
+.form-message.success,.form-message.error{padding:12px 14px;border-left:3px solid #63e6bd;background:#09251f}
+.form-message.error{border-color:#ff8b6b;background:#2b1512}
+main,.th-home{max-width:var(--shell-max)}
+footer{padding-inline:max(22px,calc((100vw - var(--shell-max))/2))}
+@media(min-width:1500px){body{font-size:16px}.site-header{min-height:76px}.site-header nav a{font-size:11px}.th-home-shell .th-hero{min-height:590px}}
+@media(max-width:900px){
+  .site-header{display:grid;grid-template-columns:1fr auto auto;gap:10px;padding:10px 18px}
+  .nav-toggle{display:grid}
+  .site-header nav{grid-column:1/-1;display:none!important;grid-template-columns:1fr 1fr;gap:4px;width:100%;padding:8px;border:1px solid #244c5b;background:#061923;overflow:visible}
+  .site-header.nav-open nav{display:grid!important}
+  .site-header nav a{justify-content:flex-start;padding-inline:14px}
+  .head-tools .identity span,.head-tools .identity small,.head-tools .identity i{display:none}
+  .head-tools .identity{display:grid;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.2);place-items:center}
+  .head-tools .identity:before{content:"TK";font:700 10px 'IBM Plex Mono',monospace}
+}
+@media(max-width:560px){
+  .site-header{grid-template-columns:1fr auto auto;padding-inline:12px}
+  .site-header .brand span small{display:none}
+  .site-header nav{grid-template-columns:1fr}
+  .locale-switch{display:none}
+  footer{grid-template-columns:1fr!important;gap:22px;text-align:left}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

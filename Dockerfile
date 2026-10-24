@@ -7,7 +7,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends espeak-ng \
     && useradd --uid 10001 --create-home app \
     && mkdir -p /data/thumbs && chown -R app:app /data
 COPY game/requirements.txt ./requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN --mount=type=secret,id=proxy_ca \
+    if [ -f /run/secrets/proxy_ca ]; then export PIP_CERT=/run/secrets/proxy_ca; fi; \
+    pip install --no-cache-dir -r requirements.txt
 COPY --chown=app:app game/ ./
 USER app
 EXPOSE 5000

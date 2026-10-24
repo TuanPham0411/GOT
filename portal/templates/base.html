@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}Thiên Hạ{% endblock %}</title>
+  <meta name="description" content="Cổng dự án phần mềm, hệ thống nhúng và sản phẩm kỹ thuật Thiên Hạ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/site.css?v=11">
+  <link rel="stylesheet" href="/static/studio.css?v=2">
+  <link rel="stylesheet" href="/static/feature-pages.css?v=2">
+  <link rel="stylesheet" href="/static/thienha-theme.css?v=4">
+  <link rel="stylesheet" href="/static/ui-icons.css?v=1">
+  <link rel="stylesheet" href="/static/design-v3.css?v=20260820"><link rel="stylesheet" href="/static/design-v4.css?v=20260820b"><link rel="stylesheet" href="/static/design-v5.css?v=20260820d"><link rel="stylesheet" href="/static/design-v6.css?v=20260820a"><link rel="stylesheet" href="/static/design-v7.css?v=20260820a">
+  <link rel="icon" href="/static/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/static/site.webmanifest">
+  <meta name="theme-color" content="#071017">
+  {% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}{{ ' project-detail-page' if request.path.startswith('/projects/') else ' portal-theme-page' }}">
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+  <header class="site-header">
+    <a class="brand" href="/"><b>TH</b><span>THIÊN HẠ<small>CÔNG XƯỞNG KỸ THUẬT SỐ</small></span></a>
+    <nav aria-label="Điều hướng chính"><a href="/">GIỚI THIỆU</a><a href="/projects">DỰ ÁN</a><a href="/downloads">TẢI XUỐNG</a><a href="/support">DỊCH VỤ</a>{% if admin_user %}<a href="/admin">QUẢN TRỊ</a>{% endif %}</nav>
+    <div class="head-tools">{% if me %}<a class="account-link identity" href="/account"><span>{{me.name or me.email}}</span><small>{{'Quản trị viên' if admin_user else 'Thành viên'}}</small><i aria-hidden="true"></i></a><form class="logout-form" method="post" action="/logout"><button class="button header-logout" type="submit">ĐĂNG XUẤT</button></form>{% else %}<a class="account-link guest" href="/login">Đăng nhập / Đăng ký</a>{% endif %}</div>
+  </header>
+  <div id="main">{% block content %}{% endblock %}</div>
+  <footer><div><b>THIÊN HẠ</b><p>CÔNG XƯỞNG KỸ THUẬT SỐ</p></div><div><a href="/projects">DỰ ÁN</a><a href="/downloads">TẢI XUỐNG</a><a href="/support">DỊCH VỤ</a></div><span>{% if me %}{{me.name or me.email}} · {{'QUẢN TRỊ VIÊN' if admin_user else 'THÀNH VIÊN'}}{% else %}© 2026 THIÊN HẠ{% endif %}</span></footer>
+  <script defer src="/static/ui-icons.js?v=1"></script>
+  <script defer src="/static/design-v3.js?v=20260820"></script>
+  <script defer src="/static/design-v5.js?v=20260820c"></script>
+</body>
+</html>
