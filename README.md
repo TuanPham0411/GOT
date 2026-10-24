@@ -20,7 +20,7 @@ Mở http://127.0.0.1:5080. Để máy khác trong LAN truy cập, đặt `GOT_B
 
 Container chạy Gunicorn bằng user riêng, filesystem chỉ đọc, cache ảnh trong volume, healthcheck và có `espeak-ng` cho tiếng Việt/Anh. Cổng 5080 cho phép kiểm thử song song dịch vụ cũ ở cổng 5000.
 
-Game giữ cơ chế phiên hiện tại qua `https://thienha.io.vn`. Khi chưa có portal, giao diện dùng preview hiện có. Cần kiểm thử tích hợp tài khoản/phiên trước khi chuyển production.
+Game giữ cơ chế phiên hiện tại qua `https://thienha.io.vn`. Khi kiểm thử độc lập, mở `http://127.0.0.1:5080/?preview=1`; preview chỉ bật trên localhost/127.0.0.1. Cần kiểm thử tích hợp tài khoản/phiên trước khi chuyển production.
 
 ## Kiểm thử
 

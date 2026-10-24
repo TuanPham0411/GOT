@@ -59,6 +59,7 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(response.status_code, 206)
         self.assertEqual(len(response.data), 100)
         self.assertNotIn('Content-Encoding', response.headers)
+        response.close()
 
 
 if __name__ == '__main__':
