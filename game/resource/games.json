@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "8.0",
+  "gameCount": 18,
+  "games": [
+    {"id":"listen-image-en","type":"topic-data","name":{"vi":"Nghe tên chọn hình (EN)","en":"Listen & Choose — English"},"topicSelectable":true,"difficultySelectable":true,"enabled":true,"engine":"listen-image","language":"en","icon":"🎧"},
+    {"id":"listen-image-vi","type":"topic-data","name":{"vi":"Nghe tên chọn hình (VI)","en":"Listen & Choose — Vietnamese"},"topicSelectable":true,"difficultySelectable":true,"enabled":true,"engine":"listen-image","language":"vi","icon":"🔊"},
+    {"id":"puzzle","type":"topic-data","name":{"vi":"Ghép hình đúng theo mẫu","en":"Picture Puzzle"},"topicSelectable":true,"difficultySelectable":true,"enabled":true,"icon":"🧩"},
+    {"id":"sudoku","type":"generated","name":{"vi":"Sudoku","en":"Sudoku"},"difficultySelectable":true,"enabled":true,"icon":"🔢"},
+    {"id":"image-answer","type":"topic-data","name":{"vi":"Nhìn hình chọn đáp án","en":"Image Quiz"},"topicSelectable":true,"difficultySelectable":true,"enabled":true,"icon":"🖼️"},
+    {"id":"count","type":"topic-data","name":{"vi":"Học đếm số, đếm hình ảnh","en":"Count Pictures"},"difficultySelectable":true,"enabled":true,"icon":"🍎"},
+    {"id":"alphabet-en","type":"generated","name":{"vi":"Học bảng chữ cái tiếng Anh","en":"English Alphabet"},"difficultySelectable":true,"enabled":true,"icon":"ABC"},
+    {"id":"alphabet-vi","type":"generated","name":{"vi":"Học bảng chữ cái tiếng Việt","en":"Vietnamese Alphabet"},"difficultySelectable":true,"enabled":true,"icon":"ĂÂ"},
+    {"id":"memory","type":"topic-data","name":{"vi":"Lật cặp hình giống nhau","en":"Memory Cards"},"topicSelectable":true,"difficultySelectable":true,"enabled":true,"icon":"🧠"},
+    {"id":"bomber","type":"generated","name":{"vi":"Phá bom","en":"Bomb Breaker"},"difficultySelectable":true,"enabled":true,"icon":"💣"},
+    {"id":"hidden-object","type":"topic-data","name":{"vi":"Tìm đủ số vật mẫu bị giấu trong tranh","en":"Hidden Objects"},"topicSelectable":true,"difficultySelectable":true,"enabled":true,"icon":"🔎"},
+    {"id":"tic-tac-toe","type":"generated","name":{"vi":"Cờ caro (2 người chơi)","en":"Tic-tac-toe — 2 Players"},"difficultySelectable":true,"enabled":true,"icon":"⭕"},
+    {"id":"colors","type":"generated","name":{"vi":"Học màu sắc","en":"Learn Colors"},"difficultySelectable":true,"enabled":true,"icon":"🎨"},
+    {"id":"space-shooter","type":"generated","name":{"vi":"Phi thuyền bắn thiên thạch","en":"Meteor Defender"},"difficultySelectable":true,"enabled":true,"icon":"🚀"},
+    {"id":"math-basic","type":"generated","name":{"vi":"Học phép toán cơ bản","en":"Basic Math"},"difficultySelectable":true,"enabled":true,"icon":"➕"},
+    {"id":"math-advanced","type":"generated","name":{"vi":"Học phép toán nâng cao","en":"Advanced Math"},"difficultySelectable":true,"enabled":true,"icon":"✖️"},
+    {"id":"match-transport","type":"topic-data","name":{"vi":"Nối phương tiện vào phương thức giao thông","en":"Match Transport Types"},"difficultySelectable":true,"enabled":true,"icon":"🚗"},
+    {"id":"match-habitat","type":"topic-data","name":{"vi":"Nối động vật vào môi trường sống","en":"Match Animal Habitats"},"difficultySelectable":true,"enabled":true,"icon":"🦁"}
+  ]
+}

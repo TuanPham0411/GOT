@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "8.6",
+  "topics": [
+    {
+      "id": "animal",
+      "name": {
+        "en": "Animals",
+        "vi": "Động vật"
+      },
+      "file": "topic-animal.json",
+      "itemCount": 351,
+      "imageRoot": "images/imagegen-v86/dong-vat"
+    },
+    {
+      "id": "transport",
+      "name": {
+        "en": "Transport",
+        "vi": "Phương tiện giao thông"
+      },
+      "file": "topic-transport.json",
+      "itemCount": 100,
+      "imageRoot": "images/imagegen-v86/phuong-tien"
+    },
+    {
+      "id": "plant",
+      "name": {
+        "en": "Plants and Fruit",
+        "vi": "Thực vật, trái cây"
+      },
+      "file": "topic-plant.json",
+      "itemCount": 100,
+      "imageRoot": "images/imagegen-v86/thuc-vat"
+    },
+    {
+      "id": "object",
+      "name": {
+        "en": "Objects and Instruments",
+        "vi": "Đồ vật, nhạc cụ, dụng cụ"
+      },
+      "file": "topic-object.json",
+      "itemCount": 100,
+      "imageRoot": "images/imagegen-v86/do-vat"
+    },
+    {
+      "id": "flag",
+      "name": {
+        "en": "Flags and Clothing",
+        "vi": "Quốc kỳ, trang phục"
+      },
+      "file": "topic-flag.json",
+      "itemCount": 249,
+      "imageRoot": "images/flag"
+    },
+    {
+      "id": "number",
+      "name": {
+        "en": "Numbers",
+        "vi": "Số đếm"
+      },
+      "file": "topic-number.json",
+      "itemCount": 21,
+      "imageRoot": "images/transparent-library"
+    },
+    {
+      "id": "alphabet-en",
+      "name": {
+        "en": "English Alphabet",
+        "vi": "Bảng chữ cái tiếng Anh"
+      },
+      "file": "topic-alphabet-en.json",
+      "itemCount": 26,
+      "imageRoot": "images/transparent-library"
+    },
+    {
+      "id": "alphabet-vi",
+      "name": {
+        "en": "Vietnamese Alphabet",
+        "vi": "Bảng chữ cái tiếng Việt"
+      },
+      "file": "topic-alphabet-vi.json",
+      "itemCount": 29,
+      "imageRoot": "images/transparent-library"
+    },
+    {
+      "id": "environment",
+      "name": {
+        "en": "Environment and Transport",
+        "vi": "Môi trường, giao thông"
+      },
+      "file": "topic-environment.json",
+      "itemCount": 41,
+      "imageRoot": "images/transparent-library"
+    },
+    {
+      "id": "transport-mode",
+      "name": {
+        "vi": "Phương thức giao thông",
+        "en": "Transport modes"
+      },
+      "file": "topic-transport-mode.json",
+      "enabled": true,
+      "itemCount": 26
+    }
+  ]
+}

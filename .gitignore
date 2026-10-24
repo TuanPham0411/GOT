@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite*
+*.db
+*.log
+game/static/cache/
+*.tar
+*.tar.gz
+*.zip
+reports/

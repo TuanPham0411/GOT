@@ -1,0 +1,3 @@
+services:
+  game:
+    image: ${GOT_IMAGE:?Set GOT_IMAGE to a tested immutable GHCR commit tag}

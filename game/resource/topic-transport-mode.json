@@ -1,0 +1,947 @@
+{
+  "schemaVersion": "8.8",
+  "id": "transport-mode",
+  "items": [
+    {
+      "id": "transport-mode-waterway-v83",
+      "topic": "transport-mode",
+      "order": 1,
+      "viName": "Giao thông đường thủy",
+      "enName": "Inland waterway transport",
+      "description": "Giao thông đường thủy — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-library/transport-mode-waterway-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Sông, hồ, kênh, cảng hoặc biển theo loại hình.",
+          "labelEn": "Operating route",
+          "valueEn": "Rivers, lakes, canals, ports or the sea, depending on the mode."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Diesel, xăng, điện, gió hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Diesel, petrol, electricity, wind or human power, depending on the vehicle."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Inland waterway transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "transport-mode-aviation-v83",
+      "topic": "transport-mode",
+      "order": 2,
+      "viName": "Giao thông hàng không",
+      "enName": "Aviation transport",
+      "description": "Giao thông hàng không — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-library/transport-mode-aviation-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Không phận và sân bay hoặc bãi đáp được cấp phép.",
+          "labelEn": "Operating route",
+          "valueEn": "Không phận và sân bay hoặc bãi đáp được cấp phép."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Nhiên liệu hàng không hoặc điện tùy thiết kế.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Nhiên liệu hàng không hoặc điện tùy thiết kế."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Aviation transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "transport-mode-road-v83",
+      "topic": "transport-mode",
+      "order": 3,
+      "viName": "Giao thông đường bộ",
+      "enName": "Road transport",
+      "description": "Giao thông đường bộ — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-library/transport-mode-road-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Road transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "transport-mode-maritime-v83",
+      "topic": "transport-mode",
+      "order": 4,
+      "viName": "Giao thông hàng hải",
+      "enName": "Maritime transport",
+      "description": "Giao thông hàng hải — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-library/transport-mode-maritime-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Sông, hồ, kênh, cảng hoặc biển theo loại hình.",
+          "labelEn": "Operating route",
+          "valueEn": "Rivers, lakes, canals, ports or the sea, depending on the mode."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Diesel, xăng, điện, gió hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Diesel, petrol, electricity, wind or human power, depending on the vehicle."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Maritime transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "transport-mode-rail-v83",
+      "topic": "transport-mode",
+      "order": 5,
+      "viName": "Giao thông đường sắt",
+      "enName": "Rail transport",
+      "description": "Giao thông đường sắt — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-library/transport-mode-rail-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường ray đô thị, liên tỉnh hoặc tuyến hàng hóa.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường ray đô thị, liên tỉnh hoặc tuyến hàng hóa."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Điện hoặc diesel; một số hệ thống lịch sử dùng hơi nước.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Điện hoặc diesel; một số hệ thống lịch sử dùng hơi nước."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Rail transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "transport-mode-military-v83",
+      "topic": "transport-mode",
+      "order": 6,
+      "viName": "Giao thông quân sự",
+      "enName": "Military transport",
+      "description": "Giao thông quân sự — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-library/transport-mode-military-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Military transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-bicycle",
+      "topic": "transport-mode",
+      "viName": "Giao thông xe đạp",
+      "enName": "Bicycle Transport",
+      "description": "Giao thông xe đạp — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/bicycle-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 7,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Bicycle Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-motorcycle",
+      "topic": "transport-mode",
+      "viName": "Giao thông xe máy",
+      "enName": "Motorcycle Transport",
+      "description": "Giao thông xe máy — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/motorcycle-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 8,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Motorcycle Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-passenger-car",
+      "topic": "transport-mode",
+      "viName": "Giao thông ô tô",
+      "enName": "Passenger Car Transport",
+      "description": "Giao thông ô tô — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/passenger-car-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 9,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Passenger Car Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-public-bus",
+      "topic": "transport-mode",
+      "viName": "Giao thông xe buýt",
+      "enName": "Public Bus Transport",
+      "description": "Giao thông xe buýt — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/public-bus-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 10,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Public Bus Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-heavy-truck",
+      "topic": "transport-mode",
+      "viName": "Giao thông xe tải",
+      "enName": "Heavy Truck Transport",
+      "description": "Giao thông xe tải — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/heavy-truck-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 11,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Heavy Truck Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-agricultural",
+      "topic": "transport-mode",
+      "viName": "Phương tiện nông nghiệp",
+      "enName": "Agricultural Vehicles",
+      "description": "Phương tiện nông nghiệp — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/agricultural-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 12,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Agricultural Vehicles — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-construction",
+      "topic": "transport-mode",
+      "viName": "Phương tiện xây dựng",
+      "enName": "Construction Vehicles",
+      "description": "Phương tiện xây dựng — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/construction-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 13,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Construction Vehicles — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-emergency",
+      "topic": "transport-mode",
+      "viName": "Phương tiện khẩn cấp",
+      "enName": "Emergency Transport",
+      "description": "Phương tiện khẩn cấp — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/emergency-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 14,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Emergency Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-personal-mobility",
+      "topic": "transport-mode",
+      "viName": "Phương tiện cá nhân",
+      "enName": "Personal Mobility",
+      "description": "Phương tiện cá nhân — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/personal-mobility-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 15,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Personal Mobility — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-urban-rail",
+      "topic": "transport-mode",
+      "viName": "Đường sắt đô thị",
+      "enName": "Urban Rail",
+      "description": "Đường sắt đô thị — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/urban-rail-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 16,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường ray đô thị, liên tỉnh hoặc tuyến hàng hóa.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường ray đô thị, liên tỉnh hoặc tuyến hàng hóa."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Điện hoặc diesel; một số hệ thống lịch sử dùng hơi nước.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Điện hoặc diesel; một số hệ thống lịch sử dùng hơi nước."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Urban Rail — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-intercity-rail",
+      "topic": "transport-mode",
+      "viName": "Đường sắt liên tỉnh",
+      "enName": "Intercity Rail",
+      "description": "Đường sắt liên tỉnh — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/intercity-rail-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 17,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường ray đô thị, liên tỉnh hoặc tuyến hàng hóa.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường ray đô thị, liên tỉnh hoặc tuyến hàng hóa."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Điện hoặc diesel; một số hệ thống lịch sử dùng hơi nước.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Điện hoặc diesel; một số hệ thống lịch sử dùng hơi nước."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Intercity Rail — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-freight-rail",
+      "topic": "transport-mode",
+      "viName": "Đường sắt hàng hóa",
+      "enName": "Freight Rail",
+      "description": "Đường sắt hàng hóa — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/freight-rail-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 18,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường ray đô thị, liên tỉnh hoặc tuyến hàng hóa.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường ray đô thị, liên tỉnh hoặc tuyến hàng hóa."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Điện hoặc diesel; một số hệ thống lịch sử dùng hơi nước.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Điện hoặc diesel; một số hệ thống lịch sử dùng hơi nước."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Freight Rail — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-inland-water",
+      "topic": "transport-mode",
+      "viName": "Đường thủy nội địa",
+      "enName": "Inland Water Transport",
+      "description": "Đường thủy nội địa — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/inland-water-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 19,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Sông, hồ, kênh, cảng hoặc biển theo loại hình.",
+          "labelEn": "Operating route",
+          "valueEn": "Rivers, lakes, canals, ports or the sea, depending on the mode."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Diesel, xăng, điện, gió hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Diesel, petrol, electricity, wind or human power, depending on the vehicle."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Inland Water Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-leisure-water",
+      "topic": "transport-mode",
+      "viName": "Phương tiện đường thủy giải trí",
+      "enName": "Leisure Water Transport",
+      "description": "Phương tiện đường thủy giải trí — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/leisure-water-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 20,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Sông, hồ, kênh, cảng hoặc biển theo loại hình.",
+          "labelEn": "Operating route",
+          "valueEn": "Rivers, lakes, canals, ports or the sea, depending on the mode."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Diesel, xăng, điện, gió hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Diesel, petrol, electricity, wind or human power, depending on the vehicle."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Leisure Water Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-commercial-maritime",
+      "topic": "transport-mode",
+      "viName": "Hàng hải thương mại",
+      "enName": "Commercial Maritime",
+      "description": "Hàng hải thương mại — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/commercial-maritime-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 21,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Sông, hồ, kênh, cảng hoặc biển theo loại hình.",
+          "labelEn": "Operating route",
+          "valueEn": "Rivers, lakes, canals, ports or the sea, depending on the mode."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Diesel, xăng, điện, gió hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Diesel, petrol, electricity, wind or human power, depending on the vehicle."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Commercial Maritime — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-passenger-aviation",
+      "topic": "transport-mode",
+      "viName": "Hàng không dân dụng",
+      "enName": "Passenger Aviation",
+      "description": "Hàng không dân dụng — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/passenger-aviation-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 22,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Không phận và sân bay hoặc bãi đáp được cấp phép.",
+          "labelEn": "Operating route",
+          "valueEn": "Không phận và sân bay hoặc bãi đáp được cấp phép."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Nhiên liệu hàng không hoặc điện tùy thiết kế.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Nhiên liệu hàng không hoặc điện tùy thiết kế."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Passenger Aviation — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-rotorcraft",
+      "topic": "transport-mode",
+      "viName": "Trực thăng",
+      "enName": "Rotorcraft",
+      "description": "Trực thăng — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/rotorcraft-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 23,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Không phận và sân bay hoặc bãi đáp được cấp phép.",
+          "labelEn": "Operating route",
+          "valueEn": "Không phận và sân bay hoặc bãi đáp được cấp phép."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Nhiên liệu hàng không hoặc điện tùy thiết kế.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Nhiên liệu hàng không hoặc điện tùy thiết kế."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Rotorcraft — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-space-transport",
+      "topic": "transport-mode",
+      "viName": "Giao thông vũ trụ",
+      "enName": "Space Transport",
+      "description": "Giao thông vũ trụ — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/space-transport-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 24,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Từ bãi phóng qua khí quyển đến quỹ đạo hoặc không gian.",
+          "labelEn": "Operating route",
+          "valueEn": "Từ bãi phóng qua khí quyển đến quỹ đạo hoặc không gian."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Nhiên liệu tên lửa hóa học; tàu và vệ tinh có thể dùng pin Mặt Trời sau khi phóng.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Nhiên liệu tên lửa hóa học; tàu và vệ tinh có thể dùng pin Mặt Trời sau khi phóng."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Space Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-military-land",
+      "topic": "transport-mode",
+      "viName": "Phương tiện quân sự đường bộ",
+      "enName": "Military Land Transport",
+      "description": "Phương tiện quân sự đường bộ — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/military-land-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 25,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng.",
+          "labelEn": "Operating route",
+          "valueEn": "Đường bộ, công trường, nông trại hoặc khu chuyên dụng."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Xăng, diesel, điện, hybrid hoặc sức người tùy phương tiện."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Military Land Transport — a transport mode classified by its operating route and purpose."
+    },
+    {
+      "id": "v84-transport-mode-military-air",
+      "topic": "transport-mode",
+      "viName": "Phương tiện quân sự hàng không",
+      "enName": "Military Air Transport",
+      "description": "Phương tiện quân sự hàng không — nhóm phương thức vận chuyển được phân loại theo tuyến hoạt động và mục đích sử dụng.",
+      "image": "images/transparent-v84/transport-mode/military-air-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 26,
+      "facts": [
+        {
+          "icon": "road",
+          "label": "Tuyến hoạt động",
+          "value": "Không phận và sân bay hoặc bãi đáp được cấp phép.",
+          "labelEn": "Operating route",
+          "valueEn": "Không phận và sân bay hoặc bãi đáp được cấp phép."
+        },
+        {
+          "icon": "bolt",
+          "label": "Năng lượng thường gặp",
+          "value": "Nhiên liệu hàng không hoặc điện tùy thiết kế.",
+          "labelEn": "Common energy sources",
+          "valueEn": "Nhiên liệu hàng không hoặc điện tùy thiết kế."
+        },
+        {
+          "icon": "shield",
+          "label": "Nguyên tắc an toàn",
+          "value": "Dùng phương tiện đúng hạ tầng, tải trọng và quy tắc vận hành của loại hình.",
+          "labelEn": "Safety principle",
+          "valueEn": "Use the vehicle only on suitable infrastructure and within its load and operating rules."
+        }
+      ],
+      "descriptionEn": "Military Air Transport — a transport mode classified by its operating route and purpose."
+    }
+  ],
+  "itemCount": 26,
+  "dataQuality": {
+    "method": "Biên soạn theo hạ tầng và phương thức vận tải",
+    "reviewed": "2026-08-28"
+  }
+}

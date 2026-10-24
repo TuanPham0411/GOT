@@ -1,0 +1,9 @@
+*
+!game/
+!game/**
+game/**/__pycache__/
+game/tools/
+game/tests/
+game/static/cache/
+game/.venv/
+game/.env

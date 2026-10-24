@@ -1,0 +1,1487 @@
+{
+  "schemaVersion": "8.8",
+  "id": "environment",
+  "items": [
+    {
+      "id": "environment-river-v83",
+      "topic": "environment",
+      "order": 1,
+      "viName": "Sông",
+      "enName": "River",
+      "description": "Sông — môi trường liên quan đến nước dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-river-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Môi trường liên quan đến nước",
+          "labelEn": "Environment type",
+          "valueEn": "Water-related environment"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Nước, dòng chảy, độ mặn, độ sâu và nền đáy quyết định nhóm sinh vật có thể sinh sống.",
+          "labelEn": "Observable features",
+          "valueEn": "Water, flow, salinity, depth and bottom substrate determine which organisms can live there."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "River — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-stream-v83",
+      "topic": "environment",
+      "order": 2,
+      "viName": "Suối",
+      "enName": "Stream",
+      "description": "Suối — môi trường liên quan đến nước dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-stream-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Môi trường liên quan đến nước",
+          "labelEn": "Environment type",
+          "valueEn": "Water-related environment"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Nước, dòng chảy, độ mặn, độ sâu và nền đáy quyết định nhóm sinh vật có thể sinh sống.",
+          "labelEn": "Observable features",
+          "valueEn": "Water, flow, salinity, depth and bottom substrate determine which organisms can live there."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Stream — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-ocean-v83",
+      "topic": "environment",
+      "order": 3,
+      "viName": "Biển",
+      "enName": "Ocean",
+      "description": "Biển — môi trường liên quan đến nước dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-ocean-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Môi trường liên quan đến nước",
+          "labelEn": "Environment type",
+          "valueEn": "Water-related environment"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Nước, dòng chảy, độ mặn, độ sâu và nền đáy quyết định nhóm sinh vật có thể sinh sống.",
+          "labelEn": "Observable features",
+          "valueEn": "Water, flow, salinity, depth and bottom substrate determine which organisms can live there."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Ocean — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-forest-v83",
+      "topic": "environment",
+      "order": 4,
+      "viName": "Rừng",
+      "enName": "Forest",
+      "description": "Rừng — hệ sinh thái có thảm cây dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-forest-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Hệ sinh thái có thảm cây",
+          "labelEn": "Environment type",
+          "valueEn": "Hệ sinh thái có thảm cây"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn.",
+          "labelEn": "Observable features",
+          "valueEn": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Forest — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-sky-v83",
+      "topic": "environment",
+      "order": 5,
+      "viName": "Bầu trời",
+      "enName": "Sky",
+      "description": "Bầu trời — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-sky-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Sky — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-space-v83",
+      "topic": "environment",
+      "order": 6,
+      "viName": "Vũ trụ",
+      "enName": "Outer space",
+      "description": "Vũ trụ — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-space-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Outer space — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-ground-v83",
+      "topic": "environment",
+      "order": 7,
+      "viName": "Mặt đất",
+      "enName": "Ground",
+      "description": "Mặt đất — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-ground-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Ground — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-grassland-v83",
+      "topic": "environment",
+      "order": 8,
+      "viName": "Đồng cỏ",
+      "enName": "Grassland",
+      "description": "Đồng cỏ — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-grassland-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Grassland — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-desert-v83",
+      "topic": "environment",
+      "order": 9,
+      "viName": "Sa mạc",
+      "enName": "Desert",
+      "description": "Sa mạc — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-desert-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Desert — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-rocky-mountain-v83",
+      "topic": "environment",
+      "order": 10,
+      "viName": "Núi đá",
+      "enName": "Rocky mountain",
+      "description": "Núi đá — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-rocky-mountain-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Rocky mountain — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-snow-mountain-v83",
+      "topic": "environment",
+      "order": 11,
+      "viName": "Núi tuyết",
+      "enName": "Snow mountain",
+      "description": "Núi tuyết — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-snow-mountain-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Snow mountain — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-city-v83",
+      "topic": "environment",
+      "order": 12,
+      "viName": "Thành phố",
+      "enName": "City",
+      "description": "Thành phố — cảnh quan có hoạt động của con người dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-city-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Cảnh quan có hoạt động của con người",
+          "labelEn": "Environment type",
+          "valueEn": "Cảnh quan có hoạt động của con người"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật.",
+          "labelEn": "Observable features",
+          "valueEn": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "City — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-countryside-v83",
+      "topic": "environment",
+      "order": 13,
+      "viName": "Làng quê",
+      "enName": "Countryside",
+      "description": "Làng quê — cảnh quan có hoạt động của con người dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-countryside-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Cảnh quan có hoạt động của con người",
+          "labelEn": "Environment type",
+          "valueEn": "Cảnh quan có hoạt động của con người"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật.",
+          "labelEn": "Observable features",
+          "valueEn": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Countryside — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-farmland-v83",
+      "topic": "environment",
+      "order": 14,
+      "viName": "Đồng ruộng",
+      "enName": "Farmland",
+      "description": "Đồng ruộng — cảnh quan có hoạt động của con người dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-farmland-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Cảnh quan có hoạt động của con người",
+          "labelEn": "Environment type",
+          "valueEn": "Cảnh quan có hoạt động của con người"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật.",
+          "labelEn": "Observable features",
+          "valueEn": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Farmland — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-highland-v83",
+      "topic": "environment",
+      "order": 15,
+      "viName": "Cao nguyên",
+      "enName": "Highland",
+      "description": "Cao nguyên — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-highland-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Highland — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-waterfall-v83",
+      "topic": "environment",
+      "order": 16,
+      "viName": "Thác nước",
+      "enName": "Waterfall",
+      "description": "Thác nước — môi trường liên quan đến nước dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-waterfall-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Môi trường liên quan đến nước",
+          "labelEn": "Environment type",
+          "valueEn": "Water-related environment"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Nước, dòng chảy, độ mặn, độ sâu và nền đáy quyết định nhóm sinh vật có thể sinh sống.",
+          "labelEn": "Observable features",
+          "valueEn": "Water, flow, salinity, depth and bottom substrate determine which organisms can live there."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Waterfall — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-canyon-v83",
+      "topic": "environment",
+      "order": 17,
+      "viName": "Vực sâu",
+      "enName": "Canyon",
+      "description": "Vực sâu — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-canyon-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Canyon — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-valley-v83",
+      "topic": "environment",
+      "order": 18,
+      "viName": "Thung lũng",
+      "enName": "Valley",
+      "description": "Thung lũng — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-valley-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Valley — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-hills-v83",
+      "topic": "environment",
+      "order": 19,
+      "viName": "Đồi",
+      "enName": "Hills",
+      "description": "Đồi — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-hills-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Hills — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-maple-forest-v83",
+      "topic": "environment",
+      "order": 20,
+      "viName": "Rừng phong",
+      "enName": "Maple forest",
+      "description": "Rừng phong — hệ sinh thái có thảm cây dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-maple-forest-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Hệ sinh thái có thảm cây",
+          "labelEn": "Environment type",
+          "valueEn": "Hệ sinh thái có thảm cây"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn.",
+          "labelEn": "Observable features",
+          "valueEn": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Maple forest — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "environment-mangrove-v83",
+      "topic": "environment",
+      "order": 21,
+      "viName": "Rừng ngập mặn",
+      "enName": "Mangrove forest",
+      "description": "Rừng ngập mặn — hệ sinh thái có thảm cây dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-library/environment-mangrove-v83.png",
+      "enabled": true,
+      "assetFormat": "transparent-png",
+      "assetVersion": "8.3",
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Hệ sinh thái có thảm cây",
+          "labelEn": "Environment type",
+          "valueEn": "Hệ sinh thái có thảm cây"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn.",
+          "labelEn": "Observable features",
+          "valueEn": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Mangrove forest — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-coral-reef",
+      "topic": "environment",
+      "viName": "Rạn san hô",
+      "enName": "Coral Reef",
+      "description": "Rạn san hô — môi trường liên quan đến nước dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/coral-reef-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 22,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Môi trường liên quan đến nước",
+          "labelEn": "Environment type",
+          "valueEn": "Water-related environment"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Nước, dòng chảy, độ mặn, độ sâu và nền đáy quyết định nhóm sinh vật có thể sinh sống.",
+          "labelEn": "Observable features",
+          "valueEn": "Water, flow, salinity, depth and bottom substrate determine which organisms can live there."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Coral Reef — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-tropical-rainforest",
+      "topic": "environment",
+      "viName": "Rừng mưa nhiệt đới",
+      "enName": "Tropical Rainforest",
+      "description": "Rừng mưa nhiệt đới — hệ sinh thái có thảm cây dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/tropical-rainforest-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 23,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Hệ sinh thái có thảm cây",
+          "labelEn": "Environment type",
+          "valueEn": "Hệ sinh thái có thảm cây"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn.",
+          "labelEn": "Observable features",
+          "valueEn": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Tropical Rainforest — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-temperate-forest",
+      "topic": "environment",
+      "viName": "Rừng ôn đới",
+      "enName": "Temperate Forest",
+      "description": "Rừng ôn đới — hệ sinh thái có thảm cây dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/temperate-forest-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 24,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Hệ sinh thái có thảm cây",
+          "labelEn": "Environment type",
+          "valueEn": "Hệ sinh thái có thảm cây"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn.",
+          "labelEn": "Observable features",
+          "valueEn": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Temperate Forest — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-arctic-tundra",
+      "topic": "environment",
+      "viName": "Lãnh nguyên Bắc Cực",
+      "enName": "Arctic Tundra",
+      "description": "Lãnh nguyên Bắc Cực — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/arctic-tundra-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 25,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Arctic Tundra — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-savanna",
+      "topic": "environment",
+      "viName": "Thảo nguyên nhiệt đới",
+      "enName": "Savanna",
+      "description": "Thảo nguyên nhiệt đới — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/savanna-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 26,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Savanna — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-wetland",
+      "topic": "environment",
+      "viName": "Vùng đất ngập nước",
+      "enName": "Wetland",
+      "description": "Vùng đất ngập nước — môi trường liên quan đến nước dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/wetland-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 27,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Môi trường liên quan đến nước",
+          "labelEn": "Environment type",
+          "valueEn": "Water-related environment"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Nước, dòng chảy, độ mặn, độ sâu và nền đáy quyết định nhóm sinh vật có thể sinh sống.",
+          "labelEn": "Observable features",
+          "valueEn": "Water, flow, salinity, depth and bottom substrate determine which organisms can live there."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Wetland — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-cave",
+      "topic": "environment",
+      "viName": "Hang động",
+      "enName": "Cave",
+      "description": "Hang động — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/cave-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 28,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Cave — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-volcanic-island",
+      "topic": "environment",
+      "viName": "Đảo núi lửa",
+      "enName": "Volcanic Island",
+      "description": "Đảo núi lửa — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/volcanic-island-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 29,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Volcanic Island — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-rice-terrace",
+      "topic": "environment",
+      "viName": "Ruộng bậc thang",
+      "enName": "Rice Terrace",
+      "description": "Ruộng bậc thang — cảnh quan có hoạt động của con người dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/rice-terrace-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 30,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Cảnh quan có hoạt động của con người",
+          "labelEn": "Environment type",
+          "valueEn": "Cảnh quan có hoạt động của con người"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật.",
+          "labelEn": "Observable features",
+          "valueEn": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Rice Terrace — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-tea-plantation",
+      "topic": "environment",
+      "viName": "Đồi chè",
+      "enName": "Tea Plantation",
+      "description": "Đồi chè — cảnh quan có hoạt động của con người dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/tea-plantation-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 31,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Cảnh quan có hoạt động của con người",
+          "labelEn": "Environment type",
+          "valueEn": "Cảnh quan có hoạt động của con người"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật.",
+          "labelEn": "Observable features",
+          "valueEn": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Tea Plantation — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-pine-forest",
+      "topic": "environment",
+      "viName": "Rừng thông",
+      "enName": "Pine Forest",
+      "description": "Rừng thông — hệ sinh thái có thảm cây dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/pine-forest-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 32,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Hệ sinh thái có thảm cây",
+          "labelEn": "Environment type",
+          "valueEn": "Hệ sinh thái có thảm cây"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn.",
+          "labelEn": "Observable features",
+          "valueEn": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Pine Forest — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-bamboo-forest",
+      "topic": "environment",
+      "viName": "Rừng tre",
+      "enName": "Bamboo Forest",
+      "description": "Rừng tre — hệ sinh thái có thảm cây dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/bamboo-forest-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 33,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Hệ sinh thái có thảm cây",
+          "labelEn": "Environment type",
+          "valueEn": "Hệ sinh thái có thảm cây"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn.",
+          "labelEn": "Observable features",
+          "valueEn": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Bamboo Forest — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-river-delta",
+      "topic": "environment",
+      "viName": "Đồng bằng châu thổ",
+      "enName": "River Delta",
+      "description": "Đồng bằng châu thổ — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/river-delta-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 34,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "River Delta — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-coastal-cliff",
+      "topic": "environment",
+      "viName": "Vách đá ven biển",
+      "enName": "Coastal Cliff",
+      "description": "Vách đá ven biển — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/coastal-cliff-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 35,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Coastal Cliff — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-lake",
+      "topic": "environment",
+      "viName": "Hồ nước",
+      "enName": "Lake",
+      "description": "Hồ nước — môi trường liên quan đến nước dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/lake-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 36,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Môi trường liên quan đến nước",
+          "labelEn": "Environment type",
+          "valueEn": "Water-related environment"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Nước, dòng chảy, độ mặn, độ sâu và nền đáy quyết định nhóm sinh vật có thể sinh sống.",
+          "labelEn": "Observable features",
+          "valueEn": "Water, flow, salinity, depth and bottom substrate determine which organisms can live there."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Lake — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-oasis",
+      "topic": "environment",
+      "viName": "Ốc đảo",
+      "enName": "Oasis",
+      "description": "Ốc đảo — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/oasis-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 37,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Oasis — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-glacier",
+      "topic": "environment",
+      "viName": "Sông băng",
+      "enName": "Glacier",
+      "description": "Sông băng — môi trường liên quan đến nước dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/glacier-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 38,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Môi trường liên quan đến nước",
+          "labelEn": "Environment type",
+          "valueEn": "Water-related environment"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Nước, dòng chảy, độ mặn, độ sâu và nền đáy quyết định nhóm sinh vật có thể sinh sống.",
+          "labelEn": "Observable features",
+          "valueEn": "Water, flow, salinity, depth and bottom substrate determine which organisms can live there."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Glacier — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-countryside-orchard",
+      "topic": "environment",
+      "viName": "Vườn cây làng quê",
+      "enName": "Countryside Orchard",
+      "description": "Vườn cây làng quê — hệ sinh thái có thảm cây dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/countryside-orchard-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 39,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Hệ sinh thái có thảm cây",
+          "labelEn": "Environment type",
+          "valueEn": "Hệ sinh thái có thảm cây"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn.",
+          "labelEn": "Observable features",
+          "valueEn": "Tầng cây, ánh sáng, độ ẩm và đất tạo nhiều nơi trú ẩn và nguồn thức ăn."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Countryside Orchard — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-urban-park",
+      "topic": "environment",
+      "viName": "Công viên đô thị",
+      "enName": "Urban Park",
+      "description": "Công viên đô thị — cảnh quan có hoạt động của con người dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/urban-park-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 40,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Cảnh quan có hoạt động của con người",
+          "labelEn": "Environment type",
+          "valueEn": "Cảnh quan có hoạt động của con người"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật.",
+          "labelEn": "Observable features",
+          "valueEn": "Sản xuất, xây dựng và quản lý đất làm thay đổi nước, đất, tiếng ồn và nơi sống của sinh vật."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Urban Park — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    },
+    {
+      "id": "v84-environment-underground-soil",
+      "topic": "environment",
+      "viName": "Môi trường trong đất",
+      "enName": "Underground Soil",
+      "description": "Môi trường trong đất — kiểu địa hình hoặc sinh cảnh dùng để nhận biết cảnh quan và mối liên hệ giữa địa hình, khí hậu, nước và sinh vật.",
+      "image": "images/transparent-v84/environment/underground-soil-v84.png",
+      "assetFormat": "transparent-png-alpha",
+      "imageSource": "OpenAI ImageGen",
+      "enabled": true,
+      "order": 41,
+      "facts": [
+        {
+          "icon": "category",
+          "label": "Loại môi trường",
+          "value": "Kiểu địa hình hoặc sinh cảnh",
+          "labelEn": "Environment type",
+          "valueEn": "Kiểu địa hình hoặc sinh cảnh"
+        },
+        {
+          "icon": "eye",
+          "label": "Đặc trưng quan sát",
+          "value": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây.",
+          "labelEn": "Observable features",
+          "valueEn": "Khí hậu, địa hình, nước và nền đất cùng quyết định điều kiện sống tại đây."
+        },
+        {
+          "icon": "shield",
+          "label": "Lưu ý bảo vệ",
+          "value": "Không xả rác, không phá nơi cư trú và tuân thủ quy định an toàn, bảo tồn tại khu vực thực tế.",
+          "labelEn": "Protection note",
+          "valueEn": "Do not litter or damage habitats; follow local safety and conservation rules."
+        }
+      ],
+      "descriptionEn": "Underground Soil — an environment category used to recognise landscapes and relationships among landform, climate, water and living things."
+    }
+  ],
+  "itemCount": 41,
+  "dataQuality": {
+    "method": "Biên soạn theo kiểu sinh cảnh và địa hình",
+    "reviewed": "2026-08-28"
+  }
+}

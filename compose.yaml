@@ -1,0 +1,23 @@
+name: got
+services:
+  game:
+    build: .
+    image: got-game:local
+    init: true
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    ports:
+      - "${GOT_BIND:-127.0.0.1}:${GOT_PORT:-5080}:5000"
+    volumes:
+      - thumbnails:/data/thumbs
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+volumes:
+  thumbnails:

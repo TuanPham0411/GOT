@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fff8e8">
+  <meta name="description" content="Game Of Thien — chơi, học và khám phá">
+  <title>Game Of Thien</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/app-v89.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Game Of Thien">
+      <span class="brand-mark">T</span>
+      <span><b>GAME OF THIEN</b><small>PLAY · LEARN · DISCOVER</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Khu vực">
+      <button class="nav-button active" data-view="games">Trò chơi</button>
+      <button class="nav-button" data-view="library">Thư viện</button>
+      <button class="nav-button" data-view="design">Tài nguyên thiết kế</button>
+    </nav>
+    <div class="header-actions">
+      <span id="sessionChip" class="session-chip">Đang kiểm tra phiên…</span>
+      <button id="soundButton" class="icon-button" aria-label="Bật tắt âm thanh">🔊</button>
+    </div>
+  </header>
+
+  <div class="joy-strip" aria-hidden="true">
+    <span>Học bằng hình ảnh</span><i>★</i><span>Nghe hai ngôn ngữ</span><i>●</i><span>Chơi để ghi nhớ</span>
+  </div>
+
+  <main>
+    <section id="gamesView" class="view active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">CHƠI · HỌC · KHÁM PHÁ</span>
+          <h1>Mỗi trò chơi,<br><em>một điều mới.</em></h1>
+          <p>18 hoạt động học tập và tư duy dành cho trẻ. Phiên chơi chỉ mở đúng trò và đúng thời lượng đã được chọn từ tài khoản Thiên Hạ.</p>
+          <div class="hero-stats">
+            <span><b>18</b> trò chơi</span>
+            <span><b>10</b> chủ đề</span>
+            <span><b id="resourceCount">500+</b> tư liệu</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="planet"><span>🚀</span></div>
+          <div class="orbit orbit-one">A</div>
+          <div class="orbit orbit-two">7</div>
+          <div class="orbit orbit-three">🦁</div>
+        </div>
+      </div>
+
+      <div id="sessionNotice" class="session-notice" hidden>
+        <div><span>🔐</span><div><b>Cần mở phiên từ tài khoản Thiên Hạ</b><p>Thư viện vẫn mở công khai. Để chơi, hãy chọn trò và thời lượng ở trang dịch vụ.</p></div></div>
+        <a href="https://thienha.io.vn/projects/game-of-thien">MỞ PHIÊN MỚI →</a>
+      </div>
+
+      <div class="section-heading">
+        <div><span class="eyebrow">DANH SÁCH TRÒ CHƠI</span><h2>Chọn thử thách</h2></div>
+        <div class="filter-row" id="gameFilters">
+          <button class="filter active" data-filter="all">Tất cả</button>
+          <button class="filter" data-filter="learning">Học tập</button>
+          <button class="filter" data-filter="thinking">Tư duy</button>
+          <button class="filter" data-filter="action">Vận động</button>
+        </div>
+      </div>
+      <div id="gameGrid" class="game-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="libraryView" class="view">
+      <div class="library-hero">
+        <div class="library-hero-copy"><span class="eyebrow">THƯ VIỆN KHÁM PHÁ</span><h1>Nhìn thật rõ.<br><em>Nghe thật vui.</em></h1><p>Chọn một tấm thẻ để xem ảnh lớn, đọc thông tin và nghe phát âm bằng tiếng Việt hoặc tiếng Anh.</p><div class="library-guide"><span><b>1</b> Chọn chủ đề</span><span><b>2</b> Chạm hình</span><span><b>3</b> Bấm loa để nghe</span></div></div>
+        <div class="library-bubbles" aria-hidden="true"><span>🦋</span><span>🚲</span><span>🍉</span></div>
+      </div>
+      <div class="library-toolbar">
+        <div id="topicTabs" class="topic-tabs"></div>
+        <label class="search"><span>⌕</span><input id="librarySearch" type="search" placeholder="Tìm trong thư viện…" autocomplete="off"></label>
+      </div>
+      <div class="library-summary"><p id="librarySummary">Đang tải thư viện…</p><button id="randomItem">🎲 Cho mình xem một thẻ</button></div>
+      <div id="libraryGrid" class="library-grid"></div>
+      <button id="loadMore" class="load-more" hidden>Xem thêm</button>
+    </section>
+
+    <section id="designView" class="view">
+      <div class="design-hero"><span class="eyebrow">KHO TÀI NGUYÊN</span><h1>Dành cho thiết kế game<br>và giao diện.</h1><p>Icon, model, map, NPC, trophy, animation, GIF, frame và theme được gom vào một nơi để xem trước và tái sử dụng.</p></div>
+      <div id="designGrid" class="design-grid"></div>
+    </section>
+
+    <section id="gameView" class="view game-view">
+      <div class="game-toolbar">
+        <button id="backButton" class="back-button">← Danh sách</button>
+        <div><span id="gameKicker" class="eyebrow">TRÒ CHƠI</span><h2 id="gameTitle"></h2><p id="gameMeta"></p></div>
+        <div class="game-status"><span>⭐ <b id="score">0</b></span><span>⏱ <b id="gameTime">--:--</b></span></div>
+      </div>
+      <div id="stage" class="stage"></div>
+    </section>
+  </main>
+
+  <div id="setupModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
+    <div class="modal-card setup-card">
+      <button class="modal-close" data-close="setupModal" aria-label="Đóng">×</button>
+      <span id="setupIcon" class="setup-icon">🎮</span>
+      <span class="eyebrow">CHUẨN BỊ TRÒ CHƠI</span>
+      <h2 id="setupTitle"></h2>
+      <p id="setupDescription"></p>
+      <div id="setupFields" class="setup-fields"></div>
+      <button id="startButton" class="primary-button">Bắt đầu chơi →</button>
+    </div>
+  </div>
+
+  <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="detailName">
+    <div class="modal-card detail-card">
+      <button class="modal-close" data-close="detailModal" aria-label="Đóng">×</button>
+      <div class="detail-image"><img id="detailImage" alt=""></div>
+      <div class="detail-copy">
+        <span id="detailTopic" class="eyebrow"></span>
+        <h2 id="detailName"></h2>
+        <button id="detailEnglish" class="speak-name"></button>
+        <div class="detail-descriptions">
+          <article class="language-panel vi-panel"><header><b>🇻🇳 Tiếng Việt</b><button id="speakDescriptionVi" class="mini-speak" aria-label="Đọc mô tả tiếng Việt">🔊 Đọc</button></header><p id="detailDescriptionVi"></p></article>
+          <article class="language-panel en-panel"><header><b>🇬🇧 English</b><button id="speakDescriptionEn" class="mini-speak" aria-label="Read English description">🔊 Read</button></header><p id="detailDescriptionEn"></p></article>
+        </div>
+        <div id="detailFacts" class="fact-grid"></div>
+        <div class="detail-actions"><button id="speakVi" class="primary-button">🔊 Đọc toàn bộ tiếng Việt</button><button id="speakEn" class="secondary-button">🔊 Read all in English</button><button id="stopSpeech" class="secondary-button">⏹ Dừng đọc</button><button id="nextDetail" class="secondary-button">Thẻ tiếp theo →</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script>window.GOT_PORTAL_ORIGIN="https://thienha.io.vn";</script>
+  <script src="{{ url_for('static',filename='js/app-v89.js') }}"></script>
+</body>
+</html>

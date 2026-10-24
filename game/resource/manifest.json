@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "8.6",
+  "packageId": "game-of-thien-web",
+  "packageName": "Game Of Thien — Play, Learn & Discover",
+  "entryFiles": {
+    "topics": "topics.json",
+    "games": "games.json"
+  },
+  "topicFiles": [
+    "topic-animal.json",
+    "topic-transport.json",
+    "topic-plant.json",
+    "topic-object.json",
+    "topic-flag.json",
+    "topic-number.json",
+    "topic-alphabet-en.json",
+    "topic-alphabet-vi.json",
+    "topic-environment.json",
+    "topic-transport-mode.json"
+  ],
+  "assetRoots": {
+    "images": "images",
+    "transparentPng": "images/transparent-library",
+    "transparentPngV84": "images/transparent-v84",
+    "imagegenV86": "images/imagegen-v86"
+  },
+  "counts": {
+    "topics": 10,
+    "items": 1043,
+    "games": 18,
+    "transparentPng": 307,
+    "animal": 351,
+    "transport": 100,
+    "plant": 100,
+    "object": 100,
+    "flag": 249,
+    "number": 21,
+    "alphabet-en": 26,
+    "alphabet-vi": 29,
+    "environment": 41,
+    "transportMode": 26,
+    "transport-mode": 26
+  }
+}
